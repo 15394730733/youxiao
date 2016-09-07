@@ -1,9 +1,9 @@
 <resources>
 
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowBackground">@color/windowBackground</item>
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+        <!--&lt;!&ndash;<item name="android:windowTranslucentStatus">true</item>&ndash;&gt;-->
+        <!--<item name="android:windowBackground">@color/windowBackground</item>-->
         <!--<item name="android:actionBarStyle">@color/statusBar</item>-->
     </style>
 </resources>

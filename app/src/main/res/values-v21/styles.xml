@@ -1,18 +1,18 @@
 <resources>
 
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@color/windowBackground</item>
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="windowNoTitle">true</item>-->
+        <!--<item name="android:windowBackground">@color/windowBackground</item>-->
+        <!--&lt;!&ndash;<item name="android:windowDrawsSystemBarBackgrounds">true</item>&ndash;&gt;-->
+        <!--&lt;!&ndash;<item name="android:statusBarColor">@color/statusBar</item>&ndash;&gt;-->
+        <!--&lt;!&ndash;<item name="android:windowTranslucentNavigation">true</item>&ndash;&gt;-->
+        <!--&lt;!&ndash;<item name="android:windowTranslucentStatus">true</item>&ndash;&gt;-->
+        <!--&lt;!&ndash;<item name="android:actionBarStyle">@color/colorPrimary</item>&ndash;&gt;-->
         <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
-        <!--<item name="android:statusBarColor">@color/statusBar</item>-->
-        <!--<item name="android:windowTranslucentNavigation">true</item>-->
-        <!--<item name="android:windowTranslucentStatus">true</item>-->
-        <!--<item name="android:actionBarStyle">@color/colorPrimary</item>-->
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <!-- Set the status bar to be translucent black. -->
-        <!--<item name="android:statusBarColor">#11fafafa</item>-->
-        <item name="windowActionModeOverlay">true</item>
-        <item name="android:windowContentOverlay">@null</item>
+        <!--&lt;!&ndash; Set the status bar to be translucent black. &ndash;&gt;-->
+        <!--&lt;!&ndash;<item name="android:statusBarColor">#11fafafa</item>&ndash;&gt;-->
+        <!--<item name="windowActionModeOverlay">true</item>-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
     </style>
 </resources>
