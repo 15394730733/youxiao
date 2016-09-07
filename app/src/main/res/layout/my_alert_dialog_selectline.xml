@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/dialog1"
+    android:orientation="vertical" >
+    <LinearLayout
+        
+        	android:id="@+id/dialog_top_bg"
+       		android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_top_bg"
+            />
+    <TextView 
+        android:layout_below="@id/dialog_top_bg"
+        android:id="@+id/mydialog_list_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:textSize="10pt"
+        android:text="选择线路"
+        android:textColor="#000000"
+        android:gravity="center"
+        />
+    
+    <com.youxiao.view.BaseListView 
+        android:cacheColorHint="#00000000"
+        android:background="#ffffff"
+        android:layout_below="@id/mydialog_list_title"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:divider="@drawable/listitem_divide"
+        android:id="@+id/mydialog_list"/>
+   
+    <LinearLayout
+       		android:layout_below="@id/mydialog_list" 
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_bottom_bg"
+            />
+    
+
+</RelativeLayout>

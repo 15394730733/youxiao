@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/id_tv_item_restore_commodity_name"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="商品名称"
+            android:textColor="@color/redText"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#ccc">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_tv_item_restore_prestore"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="预存"
+            android:textColor="@color/redText"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#ccc">
+
+        </LinearLayout>
+
+        <!--<TextView
+            android:id="@+id/id_tv_item_restore_delivery"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="送达"
+            android:textColor="@color/red" />-->
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/id_tv_item_restore_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="送达"
+                android:textColor="@color/redText"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignBottom="@id/id_tv_item_restore_delivery"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/id_tv_item_restore_delivery"
+                android:src="@drawable/bianji" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#ccc">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_tv_item__restore_surplus"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="结余"
+            android:textColor="@color/redText"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+</LinearLayout>

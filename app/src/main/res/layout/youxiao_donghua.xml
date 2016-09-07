@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc" >
+
+    <ImageView
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/animationContentDescription" />
+
+    <ImageView
+        android:id="@+id/viewpager1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/animationContentDescription" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/x120" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="@dimen/x220"
+            android:layout_height="@dimen/x100"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/denglu" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="@dimen/x220"
+            android:layout_height="@dimen/x100"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/zhuce" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/x250"
+        android:layout_height="@dimen/x250"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/animationContentDescription"
+        android:src="@drawable/logo813" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x100"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ima"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x100"
+            android:contentDescription="@string/animationContentDescription"
+            android:src="@drawable/icon812" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x100"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="快速体验"
+            android:textColor="#FFF" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.youxiao.Activity.statementActivity.salesSummary.SalesSummaryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/activity_sales_summary_back"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/i"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/return_back"
+                android:textColor="@color/red"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_sales_skipper_LL"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+            <Button
+                android:id="@+id/btn_chexiao"
+                android:layout_width="72dp"
+                android:layout_height="28dp"
+                android:background="@drawable/chexiao_left_red"
+                android:gravity="center"
+                android:text="@string/chexiao_name"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_run"
+                android:layout_width="72dp"
+                android:layout_height="28dp"
+                android:background="@drawable/run_right_white"
+                android:gravity="center"
+                android:text="@string/run_name"
+                android:textColor="@color/red"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/activity_sales_summary_printIV"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_toLeftOf="@+id/activity_sales_summary_dateIV"
+            android:layout_toStartOf="@+id/activity_sales_summary_dateIV"
+            android:background="@drawable/print_check"/>
+
+        <ImageView
+            android:id="@+id/activity_sales_summary_dateIV"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@drawable/date_check_on"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_xiaobu">
+
+    </View>
+    <FrameLayout
+        android:id="@+id/activity_sales_skipper_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

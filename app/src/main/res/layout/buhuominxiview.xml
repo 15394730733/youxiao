@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout 
+            android:layout_height="40dip"
+            android:layout_width="fill_parent"
+            android:orientation="horizontal"
+            >
+            
+               
+    
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/name"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="商品名称"
+        />
+  <ImageView 
+        android:id="@+id/xs_img1"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignRight="@+id/CMDTY_NAME"
+        />
+     <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/amount"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:text="数量"
+        />
+ 
+        </LinearLayout>
+        <ListView 
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/list"
+        ></ListView>
+    
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        
+        <Button 
+            android:id="@+id/send"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:text="批准"
+            android:textSize="18dip"
+            android:textColor="#333333"
+            android:onClick="send"
+            />
+                <Button 
+            android:id="@+id/nosend"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:text="不批准"
+            android:textSize="18dip"
+            android:textColor="#333333"
+            android:onClick="send"
+            />
+           <Button 
+            android:id="@+id/close"
+ 
+            android:layout_height="wrap_content"
+             android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:text="返回"
+            android:textSize="18dip"
+            android:textColor="#333333"
+            android:onClick="close"
+            />
+        
+    </LinearLayout>
+        
+    </LinearLayout>
+
+    <LinearLayout 
+        android:id="@+id/linear2"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+		<LinearLayout 
+		    android:layout_height="wrap_content"
+		    android:layout_width="wrap_content"
+		    android:gravity="center"
+		    android:orientation="vertical"
+		    android:background="#969696"
+		    android:padding="20dip"
+		    >
+		    <TextView 
+		    android:id="@+id/pname"
+ 			android:layout_height="wrap_content"
+		    android:layout_width="wrap_content"
+		    android:gravity="center"
+		    android:textSize="15dip"
+		    android:textColor="#ffffff"
+		    android:text="加载数据"
+			/>
+		            <ProgressBar
+		     android:layout_marginTop="5dip"
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content" />
+		</LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

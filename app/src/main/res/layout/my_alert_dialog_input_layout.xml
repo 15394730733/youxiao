@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/dialog1"
+    android:orientation="vertical" >
+     <LinearLayout 
+         
+			android:id="@+id/dialog_top_bg"         
+        	android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_top_bg"
+            
+            />
+    <TextView 
+        android:layout_below="@id/dialog_top_bg"
+        android:id="@+id/mydialog_title"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="#ffffff"
+        android:textSize="8pt"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+    
+    <EditText
+        android:id="@+id/mydialog_content"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:textSize="16pt"
+        android:textColor="@color/Black"
+        android:textCursorDrawable="@null"
+         android:paddingBottom="5dp"
+        android:layout_below="@id/mydialog_title"
+        android:background="#ffffff"
+        
+        android:gravity="center"
+        android:inputType="number|number|numberDecimal|numberSigned"
+        >
+         <requestFocus /> 
+        
+        
+    </EditText>
+ 			<ImageView 
+ 			    android:layout_marginBottom="15dp"
+          android:id="@+id/line1"
+           android:layout_below="@+id/mydialog_content"
+            android:background="@drawable/transaction_detail_line_between"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"/>
+    
+    <LinearLayout
+        android:id="@+id/dialog_btn_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/mydialog_content">
+        
+        <Button 
+            android:id="@+id/mydialog_confirm"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/sure"
+            android:gravity="center"
+            android:textSize="8pt"
+            android:textColor="@color/Black"
+            android:background="@drawable/dialog_left_btn_selector"/>
+        
+        <Button 
+            android:id="@+id/mydialog_cancel"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+             android:text="@string/cancel"
+             android:layout_weight="1"
+             android:textSize="8pt"
+              android:textColor="@color/Black"
+            android:background="@drawable/dialog_right_btn_selector"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.youxiao.Activity.workActivity.officialDocument.DocumentDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <include
+            android:id="@+id/id_ll_office_document_back"
+            layout="@layout/item_layout_for_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="公告详情"
+            android:textColor="@color/grey900"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#ccc" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="欢迎使用优销"
+                android:textColor="@color/grey700"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="系统公告 | 2015-09-02 | 系统管理员"
+                android:textColor="@color/grey700"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="已读1/未读0"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#ccc" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:text="  北京销客科技服务有限公司是专注于分销、分销专用软硬件研发制造、移动互联管理和大数据分析运营的高科技企业。销客研发的软硬件是实践和时代进步相结合的产物，操作性实用性强，从创立伊始，就在每一个功能细节都致力于解决老板的分销难题，引起老板的共鸣。"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:text="  北京销客科技服务有限公司是专注于分销、分销专用软硬件研发制造、移动互联管理和大数据分析运营的高科技企业。销客研发的软硬件是实践和时代进步相结合的产物，操作性实用性强，从创立伊始，就在每一个功能细节都致力于解决老板的分销难题，引起老板的共鸣。"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:text="  北京销客科技服务有限公司是专注于分销、分销专用软硬件研发制造、移动互联管理和大数据分析运营的高科技企业。销客研发的软硬件是实践和时代进步相结合的产物，操作性实用性强，从创立伊始，就在每一个功能细节都致力于解决老板的分销难题，引起老板的共鸣。"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:text="  北京销客科技服务有限公司是专注于分销、分销专用软硬件研发制造、移动互联管理和大数据分析运营的高科技企业。销客研发的软硬件是实践和时代进步相结合的产物，操作性实用性强，从创立伊始，就在每一个功能细节都致力于解决老板的分销难题，引起老板的共鸣。"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:text="  北京销客科技服务有限公司是专注于分销、分销专用软硬件研发制造、移动互联管理和大数据分析运营的高科技企业。销客研发的软硬件是实践和时代进步相结合的产物，操作性实用性强，从创立伊始，就在每一个功能细节都致力于解决老板的分销难题，引起老板的共鸣。"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:text="  北京销客科技服务有限公司是专注于分销、分销专用软硬件研发制造、移动互联管理和大数据分析运营的高科技企业。销客研发的软硬件是实践和时代进步相结合的产物，操作性实用性强，从创立伊始，就在每一个功能细节都致力于解决老板的分销难题，引起老板的共鸣。"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

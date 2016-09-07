@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.work.saleorder.SaleOrderActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <include
+            android:id="@+id/id_ll_sale_order_back"
+            layout="@layout/item_layout_for_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="销售订单"
+            android:textColor="@color/grey900"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/id_iv_multi_select"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/id_iv_sale_order_commit"
+            android:src="@drawable/multi_select" />
+
+        <ImageView
+            android:id="@+id/id_iv_sale_order_commit"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/commit" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#ccc" />
+
+    <LinearLayout
+        android:id="@+id/id_ll_sale_order_filter"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/background_selector">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="筛选"
+            android:textColor="@color/grey500"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#ccc" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/swipe_refresh_layout">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/id_rv_sale_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey200"
+                android:scrollbars="vertical" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+     <com.youxiao.widget.FakeDialogLayout
+         android:id="@+id/fakedialoglayout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:visibility="gone">
+
+     </com.youxiao.widget.FakeDialogLayout>
+
+    </FrameLayout>
+</LinearLayout>

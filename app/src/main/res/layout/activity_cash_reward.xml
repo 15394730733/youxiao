@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey200"
+    tools:context=".ui.activity.work.rewardmanager.CashRewardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/id_rl_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/grey50">
+
+            <include
+                android:id="@+id/id_ll_cash_reward_back"
+                layout="@layout/item_layout_for_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="现金兑奖"
+                android:textColor="@color/grey900"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/commit" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/id_rl_cash_reward_customer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_selector">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="客户"
+                android:textColor="@color/grey400"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/id_tv_cash_reward_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/id_iv_customer"
+                android:text="请选择(必填)"
+                android:textColor="@color/grey400"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/id_iv_customer"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/jiantou_a" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/id_rl_cash_reward_policy_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_selector">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="政策名称"
+                android:textColor="@color/grey400"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/id_tv_cash_reward_policy_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/id_iv_policy"
+                android:text="请选择(必填)"
+                android:textColor="@color/grey400"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/id_iv_policy"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/jiantou_a" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/id_rl_cash_reward_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_selector">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="数量"
+                android:textColor="@color/grey400"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/id_et_cash_reward_quantity"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="34dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/background_rectangle_black"
+                android:textColor="@color/grey400"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/id_rl_cash_reward_cash"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_selector">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="兑现金"
+                android:textColor="@color/grey400"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="34dp"
+                android:text="0.00元"
+                android:textColor="@color/grey400"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/id_rl_cash_reward_total"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_selector">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="合计"
+                android:textColor="@color/grey400"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="34dp"
+                android:text="0.00元"
+                android:textColor="@color/grey400"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include
+            android:id="@+id/id_ll_contract_signature_keyboard"
+            layout="@layout/layout_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </FrameLayout>
+</RelativeLayout>

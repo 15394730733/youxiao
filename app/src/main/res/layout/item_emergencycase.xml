@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_experts_online_comment_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="78dp"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/DT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:text="DT" 
+                    android:textSize="8dp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ccc" />
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/FUNC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="FUNC"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ccc" />
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/SQLSTR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="SQLSTR" 
+                    android:textSize="8dp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ccc" />
+
+            <RelativeLayout
+                android:layout_width="220dp"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/ERROR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="ERROR" 
+                    android:textSize="8dp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ccc" 
+                />
+
+            <RelativeLayout
+                android:layout_width="88dp"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/CODE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="CODE" 
+                    android:textSize="8dp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ccc" />
+
+            <RelativeLayout
+                android:layout_width="88dp"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/SOURCE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="SOURCE" 
+                    android:textSize="8dp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ccc" />
+
+            <RelativeLayout
+                android:layout_width="88dp"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/NUM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="SUM" 
+                    android:textSize="8dp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ccc" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+    </LinearLayout>
+
+</LinearLayout>

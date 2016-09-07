@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorKeyboardLine"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.3dp"
+        android:background="@color/colorKeyboardLine"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/id_lay_keyboard_number_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_keyboard_number"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal|bottom"
+                android:text="1"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textSize="8sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_lay_keyboard_number_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.3dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_keyboard_number"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal|bottom"
+                android:text="2"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_horizontal|top"
+                android:text="ABC"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_lay_keyboard_number_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.3dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_keyboard_number"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal|bottom"
+                android:text="3"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_horizontal|top"
+                android:text="DEF"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.3dp"
+        android:background="@color/colorKeyboardLine"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/id_lay_keyboard_number_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_keyboard_number"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal|bottom"
+                android:text="4"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_horizontal|top"
+                android:text="GHI"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_lay_keyboard_number_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.3dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_keyboard_number"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal|bottom"
+                android:text="5"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_horizontal|top"
+                android:text="JKL"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_lay_keyboard_number_6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.3dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_keyboard_number"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal|bottom"
+                android:text="6"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_horizontal|top"
+                android:text="MNO"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.3dp"
+        android:background="@color/colorKeyboardLine"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/id_lay_keyboard_number_7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_keyboard_number"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal|bottom"
+                android:text="7"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_horizontal|top"
+                android:text="PQRS"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_lay_keyboard_number_8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.3dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_keyboard_number"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal|bottom"
+                android:text="8"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_horizontal|top"
+                android:text="TUV"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_lay_keyboard_number_9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.3dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_keyboard_number"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal|bottom"
+                android:text="9"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_horizontal|top"
+                android:text="WXYZ"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.3dp"
+        android:background="@color/colorKeyboardLine"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/keyboard_number_pressed"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_lay_keyboard_number_0"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="0.3dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_keyboard_number"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/colorKeyboardNumber"
+                android:textSize="28sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_lay_keyboard_delete"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_keyboard_delete"
+            android:orientation="vertical"
+            android:layout_marginLeft="0.3dp">
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

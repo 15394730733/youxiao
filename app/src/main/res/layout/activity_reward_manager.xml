@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey200"
+    android:orientation="vertical"
+    tools:context=".ui.activity.work.stockmanager.StockManagerActivity">
+
+    <RelativeLayout
+        android:id="@+id/id_rl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/grey50">
+
+        <include
+            android:id="@+id/id_ll_credit_note_manager_back"
+            layout="@layout/item_layout_for_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="兑奖管理"
+            android:textColor="@color/grey900"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#ccc" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/corner_for_dialog">
+
+                <LinearLayout
+                    android:id="@+id/id_ll_procurement_stock_select_provider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/search_gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:text="搜索"
+                        android:textColor="@color/grey400"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <ListView
+                android:id="@+id/id_lv_credit_note"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey50"
+                android:focusable="false" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

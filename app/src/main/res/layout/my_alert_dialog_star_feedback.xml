@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/dialog1"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dialog_top_bgstar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/dialog_top_bg"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mydialog_titlestar"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/dialog_top_bgstar"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="温馨提示"
+        android:textColor="#000000"
+        android:textSize="8pt"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/mydialog_contentstar"
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/mydialog_titlestar"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="请输入反馈内容"
+        android:textColor="@color/black"
+        android:textSize="7pt"/>
+
+    <ImageView
+        android:id="@+id/mydialog_linestar"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/mydialog_contentstar"
+        android:background="@color/gray_xiaobu"/>
+
+    <Button
+        android:id="@+id/mydialog_cancelstar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mydialog_linestar"
+        android:layout_weight="1"
+        android:background="@drawable/dialog_cancle_btn_selset"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="#169bdb"
+        android:textSize="8pt"/>
+
+</RelativeLayout>

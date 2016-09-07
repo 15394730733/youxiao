@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/date"
+        android:title="入库日期"
+        android:actionLayout="@layout/menu_text"/>
+    <item
+        android:id="@+id/procurement"
+        android:title="采购批号"
+        android:actionLayout="@layout/menu_text"/>
+</menu>

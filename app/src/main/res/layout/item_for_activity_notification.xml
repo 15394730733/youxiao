@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/id_iv_notification_stick"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/stick" />
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_tv_notification_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="欢迎使用销客分销通"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:layout_gravity="bottom">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ccc"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/id_tv_notification_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-3-19"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_marginLeft="5dp"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ccc"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:id="@+id/id_tv_notification_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统管理员"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/id_tv_notification_read_state"
+        android:layout_width="25dp"
+        android:layout_height="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/green"
+        android:text="已读"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"/>
+
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dialog1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/mydialog_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/dialog_top_bg"
+        android:gravity="center"
+        android:textSize="10pt" />
+
+    <RelativeLayout
+        android:id="@+id/visitline_select_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mydialog_title"
+        android:background="#ffffff"
+        android:gravity="center_vertical" >
+
+        <EditText
+            android:id="@+id/visitline_select"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="按汉字或首字母搜索客户"
+            android:paddingLeft="5dp" />
+
+        <Button
+            android:id="@+id/visitline_select_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"/>
+    </RelativeLayout>
+
+    <com.example.newpage.BaseListView
+        android:id="@+id/visitline"
+        android:layout_width="fill_parent"
+        android:layout_height="450dp"
+        android:layout_below="@id/visitline_select_layout"
+        android:background="#e4e3de"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/listitem_divide" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/visitline"
+        android:background="@drawable/dialog_bottom_bg"
+        android:gravity="center" />
+
+</RelativeLayout>

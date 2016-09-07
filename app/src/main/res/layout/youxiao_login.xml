@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="#40CCCccc"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/youxiao_RL_back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/i"
+            android:text="nihao" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="35dp"
+            android:gravity="center"
+            android:text="返回"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="登录"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ccc" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#ccc" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:layout_alignParentRight="true" >
+
+        <EditText
+            android:id="@+id/youxiao_login_RL_user"
+            android:layout_width="@dimen/x700"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="请输入手机号/工号"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <View
+            android:id="@+id/youxiao_login_view"
+            android:layout_width="@dimen/x700"
+            android:layout_height="1dp"
+            android:layout_alignParentRight="true"
+            android:background="#ccc" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100" >
+
+        <EditText
+            android:id="@+id/youxiao_login_RL_pwd"
+            android:layout_width="@dimen/x700"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+			android:background="@null"
+            android:hint="请输入密码"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ccc" />
+
+    <Button
+        android:id="@+id/youxiao_login"
+        android:layout_width="@dimen/x700"
+        android:layout_height="@dimen/x100"
+        android:layout_below="@+id/pwdline"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_btn_void"
+        android:clickable="false"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="#fff"
+        android:textSize="18dp" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/x700"
+        android:layout_height="@dimen/x100"
+        android:layout_gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="忘记密码？"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rrl"
+        android:layout_width="@dimen/x200"
+        android:layout_height="@dimen/x200"
+        android:layout_gravity="center"
+        android:background="#FFF"
+        android:orientation="vertical" >
+<!--                 android:visibility="invisible" -->
+
+        <ImageView
+            android:id="@+id/image_login"
+            android:layout_width="@dimen/x150"
+            android:layout_height="@dimen/x150"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView 
+            android:id="@+id/youxiao_login_LL_TV_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="张小布"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" >
+
+        <TextView
+            android:id="@+id/login_more"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="更多"
+            android:textColor="#80848d"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+</LinearLayout>

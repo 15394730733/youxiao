@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.work.stockmanager.PolicyListActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/id_rl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/grey50">
+
+        <include
+            android:id="@+id/id_ll_credit_note_detail_back"
+            layout="@layout/item_layout_for_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+        <RadioGroup
+            android:id="@+id/id_rg_cash_matter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_radiogroup"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/id_rb_cash_matter_left"
+                style="@style/style_radiobutton_left"
+                android:background="@drawable/selector_radiobutton_left"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/id_rb_cash_matter_right"
+                style="@style/style_radiobutton_right"
+                android:background="@drawable/selector_radiobutton_right" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#ccc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/id_ll_credit_note_detail_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/id_tv_credit_note_detail_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部"
+                android:textColor="@color/grey400"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#ccc" />
+
+        <LinearLayout
+            android:id="@+id/id_ll_credit_note_detail_collection"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/id_tv_credit_note_detail_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="有效"
+                android:textColor="@color/grey400"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#ccc" />
+
+        <LinearLayout
+            android:id="@+id/id_ll_credit_note_detail_debt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/id_tv_credit_note_detail_debt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="过期"
+                android:textColor="@color/grey400"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#ccc" />
+
+    <ListView
+        android:id="@+id/id_lv_credit_note_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

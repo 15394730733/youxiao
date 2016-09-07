@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/item_activity_skipper_detail_list_RL_CMDTY"
+                android:layout_width="150dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/item_activity_skipper_detail_list_commodity_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:singleLine="true"
+                    android:text="商品名称"/>
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/item_activity_skipper_detail_list_commodity_name"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/item_activity_skipper_detail_list_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:text="2L"
+                            android:textColor="#ccc"
+                            android:textSize="10sp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/item_activity_skipper_detail_list_STOCK_FORMAT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="00箱00散"
+                            android:textColor="#ccc"
+                            android:textSize="10sp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/largess_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/item_activity_skipper_detail_list_RL_CMDTY"
+                android:src="@drawable/largess_flag"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/flag_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/item_activity_skipper_detail_list_RL_CMDTY"
+                android:src="@drawable/flag_display"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/flag_rebate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/item_activity_skipper_detail_list_RL_CMDTY"
+                android:src="@drawable/flag_rebate"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/flag_prestore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/item_activity_skipper_detail_list_RL_CMDTY"
+                android:src="@drawable/flag_prestore"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#ccc">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_activity_skipper_detail_list_LL_Count"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/item_activity_skipper_detail_list_NonRetailCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:text="00"/>
+
+                <TextView
+                    android:id="@+id/item_activity_skipper_detail_list_NonRetailUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:text="箱"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/item_activity_skipper_detail_list_RetailCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:text="00"/>
+
+                <TextView
+                    android:id="@+id/item_activity_skipper_detail_list_RetailUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:text="散"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#ccc">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_activity_skipper_detail_list_LL_Price"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_activity_skipper_detail_list_boxPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="00.00"/>
+
+            <TextView
+                android:id="@+id/item_activity_skipper_detail_list_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="00.00"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#ccc">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_activity_skipper_detail_list_amount"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="00.00"/>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#ccc">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_activity_skipper_detail_list_date"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="生产日期"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#ccc">
+
+    </LinearLayout>
+
+</LinearLayout>

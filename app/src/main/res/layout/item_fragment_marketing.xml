@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/titleBar"
+        android:gravity="center_vertical">
+
+
+        <ImageView
+            android:id="@+id/iv_sales_commit"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/commit"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/ll_marketing_select_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_marketing_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择客户"
+                android:textColor="@color/colorTitleText"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/down" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_marketing_select"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/iv_marketing_more"
+            android:src="@drawable/multi_select" />
+
+        <ImageView
+            android:id="@+id/iv_marketing_more"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/add" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#ccc" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SlidingPaneLayout
+            android:id="@+id/sliding_pane_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <FrameLayout
+                android:id="@+id/fl_pane_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey200">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_pane_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+        </android.support.v4.widget.SlidingPaneLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_anchor="@id/sliding_pane_layout"
+            app:layout_anchorGravity="bottom|end"
+            android:src="@drawable/add_commodity"
+            app:backgroundTint="@color/red400"
+            />
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

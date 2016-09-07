@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.work.photomanager.PhotographUploadActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/grey0">
+
+        <include
+            android:id="@+id/id_lay_photograph_upload_back"
+            layout="@layout/item_layout_for_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="拍照上传"
+            android:textColor="@color/grey900"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/id_tv_photograph_upload_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="提交"
+            android:textColor="@color/red400"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#ccc" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey200">
+
+        <LinearLayout
+            android:id="@+id/id_srollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/id_lay_photograph_upload_client_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="客户名称"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/id_tv_photograph_upload_client_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="请选择客户"
+                        android:textColor="@color/grey400"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/jiantou_a" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey50"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="当前位置"
+                        android:textColor="@color/grey700" />
+
+                    <TextView
+                        android:id="@+id/id_tv_photograph_upload_refresh_location"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/background_rectangle_black"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="重新定位"
+                        android:textColor="@color/grey600"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:id="@+id/id_tv_photograph_upload_location_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="28dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="暂无位置信息"
+                        android:textColor="#64b5f6" />
+
+                    <ImageView
+                        android:id="@+id/id_iv_photograph_upload_clear_address"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/ease_search_clear" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/grey0"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="陈列照片"
+                    android:textColor="@color/grey700"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#ccc" />
+
+            <GridView
+                android:id="@+id/id_gv_photograph_upload_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey0"
+                android:numColumns="5" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/grey0"
+                android:gravity="center_vertical">
+
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/bianji"
+                    android:layout_marginLeft="16dp"/>
+
+                <EditText
+                    android:id="@+id/id_et_photograph_upload_display_describe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:hint="请输入照片描述..."
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/grey0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="堆头照片"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#CCC" />
+
+            <GridView
+                android:id="@+id/id_gv_photograph_upload_standees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numColumns="5"
+                android:background="@color/grey0"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/bianji" />
+
+                <EditText
+                    android:id="@+id/id_et_photograph_upload_standees_describe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:focusableInTouchMode="true"
+                    android:hint="请输入照片描述..."
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="#55cccccc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="店招照片"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#CCC" />
+
+
+            <GridView
+                android:id="@+id/id_gv_photograph_upload_signage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:numColumns="5" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/bianji" />
+
+                <EditText
+                    android:id="@+id/id_et_photograph_upload_signage_describe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:focusableInTouchMode="true"
+                    android:hint="请输入照片描述..."
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="#55cccccc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="POP照片"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#CCC" />
+
+            <GridView
+                android:id="@+id/id_gv_photograph_upload_pop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:numColumns="5" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/bianji" />
+
+                <EditText
+                    android:id="@+id/id_et_photograph_upload_pop_describe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:focusableInTouchMode="true"
+                    android:hint="请输入照片描述..."
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="#55cccccc" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

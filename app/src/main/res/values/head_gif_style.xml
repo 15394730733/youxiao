@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- <style name="animStyle" parent="@android:style/Widget.ProgressBar.Large">
+		<item name="android:indeterminateDrawable">@anim/head_gif_anim</item>
+	</style> -->
+	<style name="animCarStyle" parent="@android:style/Widget.ProgressBar.Large">
+	    <item name="android:indeterminateDrawable">@anim/main_car_anim</item>
+	</style>
+</resources>

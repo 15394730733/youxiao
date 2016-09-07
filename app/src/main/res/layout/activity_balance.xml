@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_xiaobu"
+    tools:context=".Activity.salesActivity.collectOrder.BalanceActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity_balance_RL_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/activity_balance_back"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignBottom="@+id/activity_balance_TV_titleName"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/i"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/return_back"
+                android:textColor="@color/red"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_balance_TV_titleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/balance"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_xiaobu"/>
+    <ScrollView
+        android:id="@+id/activity_balance_ScrollVeiw"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/activity_balance_LL_moling"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="抹零:"
+                    android:textSize="14sp"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin">
+
+                    <EditText
+                        android:id="@+id/activity_balance_LL_RL_moling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:inputType="numberSigned|numberDecimal"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/activity_balance_LL_RL_moLingImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@id/activity_balance_LL_RL_moling"
+                        android:layout_toEndOf="@id/activity_balance_LL_RL_moling"
+                        android:src="@drawable/balance_input"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="折扣:"
+                    android:textSize="14sp"/>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:id="@+id/activity_balance_LL_RL_zekou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="0.00"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/activity_balance_LL_RL_zeKouImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/activity_balance_LL_RL_zekou"
+                        android:layout_toEndOf="@+id/activity_balance_LL_RL_zekou"
+                        android:src="@drawable/balance_input"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="订单合计:"
+                    android:textSize="14sp"/>
+
+
+                <TextView
+                    android:id="@+id/activity_balance_LL_RL_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginEnd="45dp"
+                    android:text="0.00"
+                    android:textSize="14sp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_balance_LL_xianjinshoukuan"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="现金收款:"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/activity_balance_LL_RL_xianjin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginEnd="45dp"
+                    android:background="@null"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:text="0.00"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_balance_LL_saoma"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="扫码收款:"
+                    android:textSize="14sp"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:id="@+id/activity_balance_LL_RL_saoma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="0.00"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/activity_balance_RL_IV_scanCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@id/activity_balance_LL_RL_saoma"
+                        android:layout_toEndOf="@id/activity_balance_LL_RL_saoma"
+                        android:src="@drawable/balance_input"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/activity_balance_LL_display"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="陈列专营费:"
+                    android:textSize="14sp"/>
+
+
+                <EditText
+                    android:id="@+id/activity_balance_LL_RL_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:background="@null"
+                    android:hint="0.00"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:textSize="14sp"/>
+
+
+                <ImageView
+                    android:id="@+id/activity_balance_RL_IV_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:src="@drawable/balance_input"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_balance_LL_depositAdvance"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="存入预存款:"
+                    android:textSize="14sp"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin">
+
+                    <EditText
+                        android:id="@+id/activity_balance_LL_RL_yucun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:inputType="numberSigned|numberDecimal"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/activity_balance_RL_IV_yucun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@id/activity_balance_LL_RL_yucun"
+                        android:layout_toEndOf="@id/activity_balance_LL_RL_yucun"
+                        android:src="@drawable/balance_input"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="使用预存款:"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/activity_balance_LL_RL_shiyong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginEnd="45dp"
+                    android:text="0.00"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="预付款余额:"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/activity_balance_LL_RL_yufukuanyue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginEnd="45dp"
+                    android:text="0.00"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="本此欠款:"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/activity_balance_LL_RL_qiankuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginEnd="45dp"
+                    android:text="0.00"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:text="备注:"
+                    android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/activity_balance_LL_RL_beizhu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="end"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:singleLine="true"
+                        android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/activity_balance_RL_IV_beizhu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:src="@drawable/balance_input"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_weight="2"
+                    android:text="打印数量:"
+                    android:textSize="14sp"/>
+
+                <RadioGroup
+                    android:id="@+id/printNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:contentDescription="数量"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio0"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"/>
+
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="1"/>
+
+                    <RadioButton
+                        android:id="@+id/radio2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2"/>
+
+                    <RadioButton
+                        android:id="@+id/radio3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="3"/>
+                </RadioGroup>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_xiaobu"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/activity_balance_LL_RL_balanceSure"
+            android:layout_width="0dp"
+            android:layout_height="63dp"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_balance_LL_RL_balanceSureIV"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/balance_check"/>
+
+            <TextView
+                android:id="@+id/activity_balance_RL_sureTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:duplicateParentState="true"
+                android:textColor="@drawable/check_text"
+                android:text="@string/sure"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_balance_LL_RL_balanceCancel"
+            android:layout_width="0dp"
+            android:layout_height="63dp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_balance_LL_RL_balanceBackIV"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/balance_check_cancel"/>
+
+            <TextView
+                android:id="@+id/activity_balance_RL_cancleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:duplicateParentState="true"
+                android:text="@string/cancel"
+                android:textSize="14sp"
+                android:textColor="@drawable/check_text"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

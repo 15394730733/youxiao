@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/id_tv_item_reward_commodity_name"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="兑奖名称"
+            android:textColor="@color/redText"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#ccc">
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/id_tv_item_commodity_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="数量"
+                android:textColor="@color/redText"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignBottom="@id/id_tv_item_commodity_count"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/id_tv_item_commodity_count"
+                android:src="@drawable/bianji" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#ccc">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_tv_item_reward_cash"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="兑奖商品"
+            android:textColor="@color/redText"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#ccc">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_tv_item_reward_total_price"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="商品数量"
+            android:textColor="@color/redText"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>

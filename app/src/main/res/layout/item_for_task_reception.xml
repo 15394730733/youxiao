@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/id_iv_line_top"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/grey300" />
+
+        <LinearLayout
+            android:id="@+id/id_ll_month"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/image_ring"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/id_iv_item_for_task_reception_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="@color/red400"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="月"
+                android:textColor="@color/red400"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/id_iv_line_bottom"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/id_ll_month"
+            android:layout_centerHorizontal="true"
+            android:background="@color/grey300" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_task_reception"
+            android:paddingLeft="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="销售任务:"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/id_tv_item_for_task_reception_sale_task"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10000"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="元"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="访客任务:"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/id_tv_item_for_task_reception_visitor_task"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10000"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="家"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="重点商品任务:"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/id_tv_item_for_task_reception_important_commodity_task"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10000"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="件"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/id_btn_item_for_task_reception_click_reception"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/click_reception_unclicked"
+                android:gravity="center"
+                android:text="点击接收"
+                android:textColor="@color/red400"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

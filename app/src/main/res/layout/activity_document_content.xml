@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.youxiao.Activity.workActivity.notificationManager.DocumentContentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <include
+            android:id="@+id/id_ll_document_content_back"
+            layout="@layout/item_layout_for_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="文件查看"
+            android:textColor="@color/grey900"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/grey300" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="销客科技服务有限公司是一家专注分销行业，基于现代科技，利用云计算与移动互联技术，将传统分销升级为在线分销，进而全面使用移动互联设备管理，同时也涉足行业定制设备与专用软件开发的高科技企业，更是帮助分销商转型升级发展壮大的服务型机构。\n\t\t\t我们拥有鸿鹄之志，但在燕雀的唇枪舌剑和伙伴的关爱中茁壮成长。销客在短短的成长时间内完成众多产品技术难关的攻克，同时汇聚了众多的分销行业与IT顶尖技术人才，开创分销移动互联时代。\n\t\t\t目前我们公司服务的分销商所代理的品牌有：飞鹤、雅士利、贝因美、蒙牛、老村长、中沃、百事可乐、鲁花、胡姬花、双汇、龙江家园、小村外、立白、伊利等。\n\t\t\t公司带着专注、专业的态度，专注、专业的团队，破风前行，气势磅礴！\n\t\t\t系统的培训体系，完善的职业发展通道，宽广的事业发展平台，期待有志之士的加盟！月薪过万真的不是梦。\n\t\t\t公司网址 www.xk598.com\n\t\t\t北京销客科技服务有限公司\n\t\t\t北京市密云县新城子镇政府大街9号政府办公楼106室-207\n\t\t\t青岛销客科技服务有限公司\n\t\t\t青岛市崂山区香港东路397号\n\t\t\t绵阳销客科技服务有限公司\n\t\t\t绵阳市高新区绵安路35号\n\t\t\t中国科技城软件产业园 E区206室"
+            android:textColor="@color/grey700"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

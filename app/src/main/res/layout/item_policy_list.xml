@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/id_iv_policy_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每件蒙牛果粒多空箱兑QQ星一瓶"
+            android:textColor="@color/grey800"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey400"
+            android:textSize="14sp"
+            android:text="兑奖时间:2016-01-30 至 2016-04-30"/>
+
+    </LinearLayout>
+
+    <com.youxiao.view.RotateTextView
+        android:id="@+id/id_rtv_policy_list"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/background_rotate_textview"
+        android:text="有效"
+        android:textColor="@color/red400"
+        android:textSize="8sp"
+        android:gravity="center"
+        android:paddingBottom="10dp"/>
+</RelativeLayout>

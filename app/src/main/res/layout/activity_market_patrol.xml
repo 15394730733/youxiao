@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey200"
+    android:orientation="vertical"
+    tools:context=".ui.activity.work.marketpatrol.MarketPatrolActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/id_rl_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/grey50">
+
+            <include
+                android:id="@+id/id_ll_work_market_patrol_back"
+                layout="@layout/item_layout_for_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="市场巡查"
+                android:textColor="@color/grey900"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/id_iv_market_patrol_commit"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@+id/id_iv_market_patrol_add_name"
+                android:src="@drawable/commit" />
+
+            <ImageView
+                android:id="@+id/id_iv_market_patrol_add_name"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/add" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#ccc" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/id_ll_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/id_rl_market_patrol_customer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_selector">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="客户名称"
+                            android:textColor="@color/grey700"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/id_tv_market_patrol_customer_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="请选择客户"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/jiantou_a" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/id_rl_market_patrol_customer_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/grey50">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="客户类型"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/select_client" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_ll_market_patrol_customer_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey50"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_market_patrol_type_a"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_selector"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="A类"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="16dp"
+                        android:background="#ccc" />
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_market_patrol_type_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_selector"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="B类"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="16dp"
+                        android:background="#ccc" />
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_market_patrol_type_c"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_selector"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="C类"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="16dp"
+                        android:background="#ccc" />
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_market_patrol_type_d"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_selector"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="D类"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey50"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="当前位置"
+                            android:textColor="@color/grey700" />
+
+                        <TextView
+                            android:id="@+id/id_tv_market_patrol_refresh_location"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="24dp"
+                            android:background="@drawable/background_rectangle_black"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="重新定位"
+                            android:textColor="@color/grey600"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:id="@+id/id_tv_market_patrol_location_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="28dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="暂无位置信息"
+                            android:textColor="#64b5f6" />
+
+                        <ImageView
+                            android:id="@+id/id_iv_market_patrol_clear_address"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:src="@drawable/ease_search_clear" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/id_rl_market_patrol_display_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/grey50">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="本品陈列位置"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/select_client" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_ll_market_patrol_display_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey50"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_market_patrol_first_place"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_selector"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="第一位置"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="16dp"
+                        android:background="#ccc" />
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_market_patrol_second_place"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_selector"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="第二位置"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="16dp"
+                        android:background="#ccc" />
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_market_patrol_last_place"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_selector"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="位置很差"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <RelativeLayout
+                    android:id="@+id/id_rl_market_patrol_display_performance"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/grey50">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="本品陈列表现"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/select_client" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/id_ll_market_patrol_display_performance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey50"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_market_patrol_performance_special_shelf"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_selector"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="专架陈列"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="16dp"
+                        android:background="#ccc" />
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_market_patrol_performance_customer"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_selector"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="客户货架"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="16dp"
+                        android:background="#ccc" />
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_market_patrol_performance_standees"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_selector"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="堆头陈列"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="16dp"
+                        android:background="#ccc" />
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_market_patrol_performance_cleanliness"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_selector"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="整洁度好"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="16dp"
+                        android:background="#ccc" />
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_market_patrol_performance_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_selector"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="价格签好"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <RelativeLayout
+                    android:id="@+id/id_rl_market_patrol_condition_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_selector">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="本品品相数量"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <EditText
+                            android:id="@+id/id_et_market_patrol_condition_quantity"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:hint="请输入"
+                            android:textColorHint="@color/grey400" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="16dp"
+                            android:text="种"
+                            android:textColor="@color/grey500" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/id_ll_content_view_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="#ccc" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/id_rl_market_patrol_expiry_commodity"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_selector">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="本品临期商品"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+
+                        <EditText
+                            android:id="@+id/id_et_market_patrol_expire_commodity"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:hint="请输入"
+                            android:textColorHint="@color/grey400" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="16dp"
+                            android:text="个"
+                            android:textColor="@color/grey500" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/id_ll_content_view_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="#ccc" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="本品服务评价"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/id_iv_market_patrol_star_1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ratingbar_unselected" />
+
+                        <ImageView
+                            android:id="@+id/id_iv_market_patrol_star_2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/ratingbar_unselected" />
+
+                        <ImageView
+                            android:id="@+id/id_iv_market_patrol_star_3"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/ratingbar_unselected" />
+
+                        <ImageView
+                            android:id="@+id/id_iv_market_patrol_star_4"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/ratingbar_unselected" />
+
+                        <ImageView
+                            android:id="@+id/id_iv_market_patrol_star_5"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/ratingbar_unselected" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/id_tv_market_patrol_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="16dp"
+                        android:text="5分"
+                        android:textColor="@color/grey500"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <RelativeLayout
+                    android:id="@+id/id_rl_market_patrol_last_visit_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_selector">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="最后一次拜访时间"
+                        android:textColor="@color/grey700"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:text="2016年6月1日"
+                            android:textColor="@color/grey500"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="16dp"
+                            android:text="3天前"
+                            android:textColor="@color/grey500"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include
+            android:id="@+id/id_market_patrol_keyboard"
+            layout="@layout/layout_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey200"
+    tools:context=".ui.activity.work.contractsignature.ContractSignatureActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/id_rl_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/grey50">
+
+            <include
+                android:id="@+id/id_ll_contract_signature_back"
+                layout="@layout/item_layout_for_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="合同签订"
+                android:textColor="@color/grey900"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/id_iv_market_patrol_commit"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/commit" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#ccc" />
+
+        <ScrollView
+            android:id="@+id/id_sv_contract_signature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/grey50"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:text="协议编号:"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="24dp"
+                        android:paddingRight="16dp"
+                        >
+
+
+                        <EditText
+                            android:id="@+id/id_et_contract_signature_agreement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="24dp"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:hint="请输入"
+                            android:singleLine="true"
+                            android:textColor="@color/grey800"
+                            android:textColorHint="@color/grey400"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/id_iv_contract_signature_agreement_clear"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="end|center_vertical"
+                            android:src="@drawable/ease_search_clear_normal" />
+                    </FrameLayout>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/id_rl_contract_signature_customer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_selector">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="客户名称"
+                            android:textColor="@color/grey700"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/id_tv_contract_signature_customer_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="请选择客户"
+                            android:textColor="@color/grey500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/jiantou_a" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey50"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="当前位置"
+                            android:textColor="@color/grey700" />
+
+                        <TextView
+                            android:id="@+id/id_tv_contract_signature_refresh_location"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="24dp"
+                            android:background="@drawable/background_rectangle_black"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="重新定位"
+                            android:textColor="@color/grey600"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:id="@+id/id_tv_contract_signature_location_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="28dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="暂无位置信息"
+                            android:textColor="#64b5f6" />
+
+                        <ImageView
+                            android:id="@+id/id_iv_contract_signature_clear_address"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:src="@drawable/ease_search_clear" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/grey50">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="承诺销量"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/id_et_contract_signature_sales_volume"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:gravity="end"
+                                android:hint="请输入"
+                                android:singleLine="true"
+                                android:textColor="@color/grey800"
+                                android:textColorHint="@color/grey400"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/id_iv_contract_signature_sales_volume_clear"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="end|center_vertical"
+                                android:src="@drawable/ease_search_clear_normal" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:text="元/月" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="#ccc" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/grey50">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="品相数量"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <EditText
+                                android:id="@+id/id_et_contract_signature_quantity"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:gravity="end"
+                                android:hint="请输入"
+                                android:singleLine="true"
+                                android:textColor="@color/grey800"
+                                android:textColorHint="@color/grey400"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/id_iv_contract_signature_quantity_clear"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="end|center_vertical"
+                                android:src="@drawable/ease_search_clear_normal" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:text="种" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="#ccc" />
+
+                <RelativeLayout
+                    android:id="@+id/id_rl_contract_signature_display_way"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_selector">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="陈列方式"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/id_tv_contract_signature_display_way"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="42dp"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/jiantou_a" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/grey50"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="签约时间"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/id_tv_contract_signature_start_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="请选择"
+                            android:textColor="@color/grey400"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="至"
+                            android:textColor="@color/grey800"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/id_tv_contract_signature_end_time"
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="请选择"
+                            android:textColor="@color/grey400"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="共12个月" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="#ccc" />
+
+                <RelativeLayout
+                    android:id="@+id/id_rl_contract_signature_charge_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_selector">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="费用类别"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/id_tv_contract_signature_charge_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="42dp"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/jiantou_a" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="#ccc" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/grey50"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="费用金额"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <EditText
+                                android:id="@+id/id_et_contract_signature_charge"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="24dp"
+                                android:focusableInTouchMode="true"
+                                android:hint="请输入费用"
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textColorHint="@color/grey400"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/id_iv_contract_signature_charge_clear"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="end|center_vertical"
+                                android:src="@drawable/ease_search_clear_normal" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="元" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="#ccc" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/grey50"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="费用发放时间"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/id_tv_contract_signature_charge_issue_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:text="请选择"
+                        android:textColor="@color/grey400"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="#ccc" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_selector">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="协议内容"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/jiantou_a" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+
+                <FrameLayout
+                    android:id="@+id/id_rl_contract_signature_customer_signature"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_selector">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:text="客户签字"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/id_iv_customer_signature_arrows"
+
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/jiantou_a"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/id_iv_customer_signature"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="16dp"
+                        android:scaleType="fitXY"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="#ccc" />
+
+                <FrameLayout
+                    android:id="@+id/id_rl_contract_signature_manager_signature"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_selector">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:text="经办签字"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/id_iv_manager_signature_arrows"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/jiantou_a"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/id_iv_manager_signature"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="16dp"
+                        android:scaleType="fitXY"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="#ccc" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_selector">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="签约时间"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/id_tv_contract_signature_signature_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="#ccc" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_selector">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="签约地址"
+                        android:textColor="@color/grey700"
+                        android:textSize="14sp" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="32dp">
+
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <EditText
+                                android:id="@+id/id_et_contract_signature_address"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:gravity="end"
+                                android:hint="请输入地址"
+                                android:singleLine="true"
+                                android:textColorHint="@color/grey400"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/id_iv_contract_signature_address_clear"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="end|center_vertical"
+                                android:src="@drawable/ease_search_clear_normal" />
+                        </FrameLayout>
+
+                    </FrameLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include
+            android:id="@+id/id_ll_contract_signature_keyboard"
+            layout="@layout/layout_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </FrameLayout>
+</RelativeLayout>

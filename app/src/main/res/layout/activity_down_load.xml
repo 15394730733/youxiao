@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/splash_background3"
+        android:padding="10dp" />
+
+    <ProgressBar
+        android:id="@+id/main_bar"
+        style="@style/animCarStyle"
+        android:layout_width="48.5dp"
+        android:layout_height="33.5dp"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="15dp"
+        android:layout_marginRight="8dp"
+       />
+
+    <RelativeLayout
+        android:id="@+id/foot_li"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/down"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/Black" />
+
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/down"
+            android:layout_alignBottom="@+id/down"
+            android:text="@string/downloading"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/down" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/num"
+            android:layout_alignBottom="@+id/num"
+            android:layout_marginLeft="17dp"
+            android:layout_toRightOf="@+id/num" />
+    </RelativeLayout>
+
+</LinearLayout>

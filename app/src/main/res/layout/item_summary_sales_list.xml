@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_xiaobu"
+              android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginTop="1dp">
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="48dp">
+
+        <LinearLayout
+            android:id="@+id/item_summary_sales_LL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_summary_sales_list_customerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="州城庆宝商店"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/item_summary_sales_list_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2L"
+                android:textSize="9sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="48dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:id="@+id/item_summary_sales_list_LL1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单价 : "
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/item_summary_sales_list_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="196.00元"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_summary_sales_list_LL2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数量 : "
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/item_summary_sales_list_count_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3件3瓶"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_summary_sales_list_LL3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合计 : "
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/item_summary_sales_list_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="196.00元"
+                android:textSize="10sp"/>
+        </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

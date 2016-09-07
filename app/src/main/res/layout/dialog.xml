@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/dialog1"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/dialog_top_iv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/dialog_top_bg"
+        android:src="@drawable/dialog_top_bg"/>
+
+    <TextView
+        android:id="@+id/dialog_title_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/dialog_top_iv"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="价格"
+        android:textColor="#000000"
+        android:textSize="8pt"/>
+
+    <ImageView
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/dialog_title_tv"
+        android:background="@drawable/transaction_detail_line_between"/>
+
+    <TextView
+        android:id="@+id/history_price"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/line1"
+        android:layout_centerVertical="true"
+        android:background="#ffffff"
+        android:cacheColorHint="#00000000"
+        />
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/history_price"
+        android:background="@drawable/transaction_detail_line_between"/>
+
+    <LinearLayout
+        android:id="@+id/price_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/line2"
+        android:background="#ffffff">
+
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:paddingLeft="10dp"
+            android:textColor="@color/Black"
+            android:textCursorDrawable="@null"
+            android:textSize="16pt"/>
+
+        <TextView
+
+            android:id="@+id/unitname"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="单价"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/price_nonretail"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:paddingLeft="10dp"
+            android:textColor="@color/Black"
+            android:textCursorDrawable="@null"
+            android:textSize="16pt"/>
+
+        <TextView
+            android:id="@+id/unitname2"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="箱价"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line3"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/price_layout"
+        android:background="@drawable/transaction_detail_line_between"/>
+
+    <TextView
+        android:id="@+id/down"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/line3"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:id="@+id/line4"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/down"
+        android:background="@drawable/transaction_detail_line_between"/>
+
+    <Button
+        android:id="@+id/price_set_largess"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/line4"
+        android:background="@drawable/dialog_middle_btn_selector"
+        android:textColor="@color/Black"
+        android:textSize="18sp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/dialog_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line4"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/mydialog_confirm"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_left_btn_selector"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textColor="@color/Black"
+            android:textSize="8pt"/>
+
+        <Button
+            android:id="@+id/mydialog_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_right_btn_selector"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/Black"
+            android:textSize="8pt"/>
+    </LinearLayout>
+
+</RelativeLayout>

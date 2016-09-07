@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dialog1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/dialog_top_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/dialog_top_bg"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/mydialog_server_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_top_bg"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="@string/server_settings"
+        android:textColor="#000000"
+        android:textSize="8pt" />
+
+    <RelativeLayout
+        android:id="@+id/conten_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mydialog_server_title" >
+
+        <TextView
+            android:id="@+id/mydialog_port"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="点我修改端口号"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/config_port_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/mydialog_port"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:hint="0000"
+            android:inputType="number"
+            android:maxLength="4"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/Black"
+            android:textCursorDrawable="@null"
+            android:textSize="16dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/mydialog_server"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/config_port_edit"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="点我修改服务器地址"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/config_server_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/mydialog_server"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:hint="255.255.255.255"
+            android:maxLength="15"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/Black"
+            android:textCursorDrawable="@null"
+            android:textSize="16dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/mydialog_server"
+            android:src="@drawable/listitem_divide" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mydialog_port"
+            android:src="@drawable/listitem_divide" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/config_port_edit"
+            android:src="@drawable/listitem_divide" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/conten_layout"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/mydialog_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_left_btn_selector"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textSize="8pt" />
+
+        <Button
+            android:id="@+id/mydialog_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_right_btn_selector"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textSize="8pt" />
+    </LinearLayout>
+
+</RelativeLayout>

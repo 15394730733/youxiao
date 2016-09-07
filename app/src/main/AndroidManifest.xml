@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.youxiao"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:name=".base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="aj0y9Of5KZE0CZUed75pyaqSv40C3ufY" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <service
+            android:name=".service.YouxiaoService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.activity.login.SplashActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.MainActivity" />
+        <activity android:name=".ui.activity.login.LoginActivity" />
+        <activity android:name=".ui.activity.login.LockActivity" />
+        <activity android:name=".ui.activity.login.SetPassWordActivity" />
+        <activity android:name=".ui.activity.login.SetServerPortActivity" />
+        <activity android:name=".ui.activity.sales.commodityselector.CommoditySelectorActivity" />
+        <activity android:name=".ui.activity.work.notificationmanager.MyDocumentActivity" />
+        <activity android:name=".ui.activity.work.taskreception.TaskReceptionActivity" />
+        <activity android:name=".ui.activity.work.customermanager.CustomerManageActivity" />
+        <activity
+            android:name=".ui.activity.work.photomanager.PhotographUploadActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.activity.work.notificationmanager.RulesAndRegulationsActivity" />
+        <activity android:name=".ui.activity.work.notificationmanager.FileTemplateActivity" />
+        <activity android:name=".ui.activity.work.customermanager.CustomerDetailsActivity" />
+        <activity android:name=".ui.activity.work.customermanager.CustomerSearchActivity" />
+        <activity android:name=".ui.activity.me.systemsetting.SystemSettingActivity" />
+        <activity android:name=".ui.activity.sales.collectOrder.CommentActivity" />
+        <activity android:name=".ui.activity.sales.runOrderSelector.SkipperActivity" />
+        <activity android:name=".ui.activity.sales.runOrderSelector.SkipperDetailActivity" />
+        <activity android:name=".ui.activity.sales.commodityselector.CommoditySearchActivity" />
+        <activity android:name=".ui.activity.sales.salesmodule.SalesTemplateActivity" />
+        <activity android:name=".ui.activity.me.accountandsafety.SafetyActivity" />
+        <activity android:name=".ui.activity.me.VersionInformationActivity" />
+        <activity android:name=".ui.activity.me.aboutus.AboutUsActivity" />
+        <activity android:name=".ui.activity.me.aboutus.FocusOnWeChatActivity" />
+        <activity android:name=".ui.activity.sales.scancode.MipcaActivityCapture" />
+        <activity android:name=".ui.activity.sales.collectOrder.PaymentCodeActivity" />
+        <activity android:name=".ui.activity.work.customermanager.AddNewCustomerActivity" />
+        <activity android:name=".ui.activity.work.customermanager.SelectAccoutWayActivity" />
+        <activity android:name=".ui.activity.work.customermanager.SelectDistributionRouteActivity" />
+        <activity android:name=".ui.activity.work.customermanager.SelectPriceTypeActivity" />
+        <activity android:name=".ui.activity.work.customermanager.SelectDisplayWayActivity" />
+        <activity android:name=".ui.activity.work.customermanager.SelectCustomerAreaActivity" />
+        <activity android:name=".ui.activity.work.customermanager.CalendarActivity" />
+        <activity android:name=".ui.activity.me.accountandsafety.RemoveBoundActivity" />
+        <activity android:name=".ui.activity.me.accountandsafety.AmendPwdActivity" />
+        <activity android:name=".ui.activity.statement.newcustomerquery.NewCustomerQueryActivity" />
+        <!-- <activity android:name=".Activity.statementActivity.accountsReceivable.FundDetailActivity"></activity> -->
+        <!-- <activity android:name=".Activity.workActivity.photoManager.PreviewActivity" /> -->
+        <!-- <activity android:name=".Activity.workActivity.photoManager.PictureDetailActivity" /> -->
+        <!-- <activity android:name=".Activity.workActivity.photoManager.TakePictureActivity"></activity> -->
+
+        <activity android:name=".ui.activity.work.procurementmanager.ProcurementActivity" />
+        <activity android:name=".ui.activity.work.commodityallocation.CommodityAllocationActivity" />
+        <activity android:name=".ui.activity.work.stockmanager.StockManagerActivity" />
+        <activity android:name=".ui.activity.work.procurementmanager.RemarkActivity" />
+        <activity android:name=".ui.activity.work.procurementmanager.SelectProviderActivity" />
+        <activity android:name=".ui.activity.work.commoditymanager.CommodityActivity" />
+        <activity android:name=".ui.activity.work.saleorder.SaleOrderActivity" />
+        <activity android:name=".ui.activity.work.saleorder.BillDetailActivity" />
+        <activity android:name=".ui.activity.work.knowledgeevaluation.KnowledgeEvaluationActivity" />
+        <activity android:name=".ui.activity.work.notificationmanager.DocumentContentActivity" />
+        <activity android:name=".ui.activity.work.knowledgeevaluation.AnswerActivity" />
+        <activity android:name=".ui.activity.work.attendancesignature.AttendanceActivity" />
+        <activity android:name=".ui.activity.work.attendancesignature.SignatureActivity" />
+        <activity android:name=".ui.activity.work.attendancesignature.FineAdjustmentActivity" />
+        <activity android:name=".ui.activity.work.marketpatrol.MarketPatrolActivity" />
+        <activity android:name=".ui.activity.work.contractsignature.ContractSignatureActivity" />
+        <activity android:name=".ui.activity.work.taskboost.TaskBoostActivity" />
+        <activity android:name=".ui.activity.work.creditnotemanager.CreditNoteManagerActivity" />
+        <activity android:name=".ui.activity.work.displaymanager.DisplayManagerActivity" />
+        <activity android:name=".ui.activity.work.rebatemanager.RebateManagerActivity" />
+        <activity android:name=".ui.activity.work.depositmanager.DepositManagerActivity" />
+        <activity android:name=".ui.activity.work.creditnotemanager.CreditNoteCollectionActivity" />
+        <activity android:name=".ui.activity.work.creditnotemanager.CreditNoteDetailActivity" />
+        <activity android:name=".ui.activity.work.contractsignature.CustomerSignatureActivity" />
+        <activity android:name=".ui.activity.work.contractsignature.ManagerSignatureActivity" />
+        <activity android:name=".ui.activity.work.contractsignature.CustomerSignatureDetailActivity" />
+        <activity android:name=".ui.activity.work.contractsignature.ManagerSignatureDetailActivity" />
+        <activity android:name=".ui.activity.work.contractsignature.ChargeTypeActivity" />
+        <activity android:name=".ui.activity.work.taskboost.SalesBoostActivity" />
+        <activity android:name=".ui.activity.work.depositmanager.DepositOperationActivity" />
+        <activity android:name=".ui.activity.work.depositmanager.DepositDetailActivity" />
+        <activity android:name=".ui.activity.work.stockmanager.StockOperationActivity" />
+        <activity android:name=".ui.activity.work.stockmanager.StockDetailActivity" />
+        <activity android:name=".ui.activity.work.stockmanager.PolicyListActivity" />
+        <activity android:name=".ui.activity.work.rewardmanager.MatterRewardActivity" />
+        <activity android:name=".ui.activity.work.rewardmanager.CashRewardActivity" />
+        <activity android:name=".ui.activity.work.displaymanager.DisplayOperationActivity" />
+        <activity android:name=".ui.activity.work.displaymanager.DisplayDetailActivity" />
+        <activity android:name=".ui.activity.work.rebatemanager.RebateOperationActivity" />
+        <activity android:name=".ui.activity.work.rebatemanager.RebateDetailActivity" />
+        <activity android:name=".ui.activity.work.officialdocument.OfficeDocumentActivity" />
+        <activity android:name=".ui.activity.work.officialdocument.DocumentDetailActivity" />
+        <activity android:name=".ui.activity.work.workreport.WorkReportActivity" />
+        <activity android:name=".ui.activity.work.workreport.ReportDetailActivity" />
+        <activity android:name=".ui.activity.work.vacationprocedure.VacationProcedureActivity" />
+        <activity android:name=".ui.activity.work.reimbursementprocedure.ReimbursementProcedureActivity" />
+        <activity android:name=".ui.activity.work.otherprocedure.OtherProcedureActivity" />
+        <activity android:name=".ui.activity.work.otherprocedure.NeedMeApproveActivity" />
+        <activity android:name=".ui.activity.work.otherprocedure.ILaunchActivity" />
+        <activity android:name=".ui.activity.work.otherprocedure.BecomeRegularWorkerActivity" />
+        <activity android:name=".ui.activity.work.otherprocedure.SelectContractActivity" />
+        <activity android:name=".ui.activity.work.otherprocedure.DimissionActivity" />
+        <activity android:name=".ui.activity.work.allocationcheck.AllocationCheckActivity" />
+        <activity android:name=".ui.activity.work.allocationcheck.AllocationBillActivity" />
+        <activity android:name=".ui.activity.work.entrepotcheck.EntrepotCheckActivity" />
+        <activity android:name=".ui.activity.work.stockcheck.StockCheckActivity" />
+        <activity android:name=".ui.activity.statement.salesdaily.SalesDailyQueryActivity" />
+        <activity android:name=".ui.activity.statement.salesdetail.SalesDetailActivity" />
+        <activity android:name=".ui.activity.statement.salessummarization.SalesSummarizationActivity" />
+        <activity android:name=".ui.activity.statement.customerstockdetail.CustomerStockDetailActivity" />
+        <activity android:name=".ui.activity.statement.currentstock.CurrentStockActivity" />
+        <activity android:name=".ui.activity.statement.stockeerlywarning.StockEarlyWarningActivity" />
+        <activity android:name=".ui.activity.statement.expirationdatewarning.ExpirationDateWarningActivity" />
+        <activity android:name=".ui.activity.work.stockcheck.StockCheckDetailActivity" />
+        <activity android:name=".ui.activity.statement.salestrend.SalesTrendActivity" />
+        <activity android:name=".ui.activity.statement.salescontrast.SalesContrastActivity" />
+        <activity android:name=".ui.activity.work.scoremanager.ScoreManagerActivity" />
+        <activity android:name=".ui.activity.work.workreport.WeekReportActivity" />
+        <activity android:name=".ui.activity.work.workreport.MonthReportActivity" />
+        <activity android:name=".ui.activity.work.workreport.DayReportActivity" />
+        <activity android:name=".ui.activity.me.accountandsafety.AmendGesturePasswordActivity" />
+        <activity android:name=".ui.activity.me.aboutus.OfficialWebsiteActivity" />
+        <activity android:name=".ui.activity.me.systemsetting.CommoditySelectorActivity" />
+        <activity android:name=".ui.activity.me.systemsetting.PrintSettingActivity" />
+        <activity android:name=".ui.activity.me.systemsetting.WifiAutoUploadingActivity"></activity>
+    </application>
+
+</manifest>

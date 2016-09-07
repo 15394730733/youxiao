@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e61625"
+    tools:context=".MainActivity" >
+
+    <!-- #b90916 -->
+
+    <LinearLayout
+        android:id="@+id/info_icon_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        
+        <LinearLayout 
+            android:id="@+id/layout_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            
+        <ImageView
+            android:id="@+id/director_main_image_0"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/gesture_dicate_syscle"/>
+        <ImageView 
+            android:id="@+id/director_main_image_1"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/gesture_dicate_syscle"/>
+        <ImageView 
+            android:id="@+id/director_main_image_2"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/gesture_dicate_syscle"/>
+        </LinearLayout>
+        <LinearLayout 
+            android:id="@+id/layout_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            
+        <ImageView 
+            android:id="@+id/director_main_image_3"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/gesture_dicate_syscle"/>
+        <ImageView 
+            android:id="@+id/director_main_image_4"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/gesture_dicate_syscle"/>
+        <ImageView 
+            android:id="@+id/director_main_image_5"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/gesture_dicate_syscle"/>
+        </LinearLayout>
+        <LinearLayout 
+            android:id="@+id/layout_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            
+        <ImageView 
+            android:id="@+id/director_main_image_6"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+           	android:layout_marginRight="10dip"
+            android:background="@drawable/gesture_dicate_syscle"/>
+        <ImageView 
+            android:id="@+id/director_main_image_7"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/gesture_dicate_syscle"/>
+        <ImageView 
+            android:id="@+id/director_main_image_8"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/gesture_dicate_syscle"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/info_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher2"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/info_password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info_icon_layout"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="输入密码"
+        android:textColor="#fff" />
+    <FrameLayout
+        android:id="@+id/body_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info_password"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="32dp" >
+    </FrameLayout>
+	<!-- 
+	<LinearLayout
+        android:id="@+id/body_layout"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:gravity="center_horizontal|top"
+        android:orientation="vertical"
+        android:paddingBottom="30dip"
+        android:layout_marginTop="190dip"
+        android:paddingLeft="30dip"
+        android:paddingRight="30dip" >
+    </LinearLayout>
+	 -->
+
+    <TextView
+        android:id="@+id/info_change"
+        android:layout_width="100dip"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="60dip"
+        android:gravity="center"
+        android:text="返回登录页面"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/alert_gesture_psd_tv"
+        android:layout_width="100dip"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="60dip"
+        android:gravity="center"
+        android:text="修改手势密码"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

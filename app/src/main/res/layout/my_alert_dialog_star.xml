@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/dialog1"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dialog_top_bgstar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/dialog_top_bg"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+   <TextView
+        android:layout_below="@id/dialog_top_bgstar"
+        android:id="@+id/mydialog_titlestar"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="#ffffff"
+        android:textSize="8pt"
+        android:text="温馨提示"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+   <ImageView 
+       android:id="@+id/mydialog_linestars"
+       android:layout_below="@id/mydialog_titlestar"
+       android:layout_width="fill_parent"
+       android:layout_height="1dp"
+       android:background="#d7d7d7"/>
+   <TextView
+       android:id="@+id/mydialog_contentstar"
+       android:layout_width="fill_parent"
+       android:layout_height="70dp"
+       android:layout_below="@id/mydialog_linestars"
+       android:background="#ffffff"
+       android:gravity="center"
+       android:text="登录时，请先在【设置】中点击【数据同步】"
+       android:paddingBottom="15dp"
+       android:textColor="#000000"
+       android:textSize="7pt" />
+   <ImageView 
+       android:id="@+id/mydialog_linestar"
+       android:layout_below="@id/mydialog_contentstar"
+       android:layout_width="fill_parent"
+       android:layout_height="1dp"
+       android:background="#d7d7d7"/>
+   <Button
+       android:id="@+id/mydialog_cancelstar"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"
+       android:layout_below="@id/mydialog_linestar"
+       android:background="@drawable/dialog_cancle_btn_selset"
+       android:gravity="center"
+       android:text="立即同步"
+       android:textColor="#169bdb"
+       android:textSize="8pt" />
+
+</RelativeLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Activity.salesActivity.runOderSelector.SkipperActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity_skipper_RL_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/activity_skipper_back"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_alignBottom="@+id/activity_skipper_TV_titleName"
+            android:layout_marginLeft="8dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/i"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/return_back"
+                android:textColor="@color/red"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_skipper_TV_titleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/skipper"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_xiaobu"></View>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="跑单日期"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_xiaobu">
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="定单单号"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_xiaobu">
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="客户名称"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_xiaobu">
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="总金额"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_xiaobu">
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="使用预付款"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_xiaobu">
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="折扣金额"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_xiaobu">
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="跑单人"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_xiaobu">
+            </View>
+            <ListView
+                android:id="@+id/activity_skipper_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

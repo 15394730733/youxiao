@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.youxiao.Activity.SkipperActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_skipper_list_date"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_xiaobu">
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/item_skipper_list_orderNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_xiaobu">
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/item_skipper_list_customerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_xiaobu">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_skipper_list_total"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_xiaobu">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_skipper_list_advance"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_xiaobu">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_skipper_list_discount"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_xiaobu">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_skipper_list_skipperName"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_xiaobu">
+    </View>
+
+</LinearLayout>

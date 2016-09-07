@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="5dip">
+        <ProgressBar 
+            android:id="@+id/loadingImageView"
+            style="@style/animCarStyle"
+            android:layout_width="48.5dp"
+            android:layout_height="33.5dp"
+            android:paddingLeft="15dp" />
+        <TextView 
+            android:id="@+id/id_tv_loadingmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:layout_below="@+id/loadingImageView"
+            android:text="加载中..."
+            android:singleLine="true"
+            android:textSize="12sp"/>
+          
+    </RelativeLayout>
+        
+</RelativeLayout>
