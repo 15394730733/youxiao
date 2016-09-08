@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.youxiao.R;
-import com.youxiao.imp.OnPaneOpenAndCloseListener;
+import com.youxiao.widget.OnPaneOpenAndCloseListener;
 import com.youxiao.ui.activity.MainActivity;
 import com.youxiao.ui.activity.work.customermanager.CustomerManageActivity;
 import com.youxiao.widget.ActionItem;

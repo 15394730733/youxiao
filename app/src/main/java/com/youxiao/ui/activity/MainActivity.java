@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.youxiao.R;
 import com.youxiao.base.BaseActivity;
-import com.youxiao.imp.OnPaneOpenAndCloseListener;
+import com.youxiao.widget.OnPaneOpenAndCloseListener;
 import com.youxiao.ui.fragment.MeFragment;
 import com.youxiao.ui.fragment.MicroChatFragment;
 import com.youxiao.ui.fragment.SalesFragment;
