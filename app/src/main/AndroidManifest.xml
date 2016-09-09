@@ -208,7 +208,8 @@
         <activity android:name=".ui.activity.me.aboutus.OfficialWebsiteActivity" />
         <activity android:name=".ui.activity.me.systemsetting.CommoditySelectorActivity" />
         <activity android:name=".ui.activity.me.systemsetting.PrintSettingActivity" />
-        <activity android:name=".ui.activity.me.systemsetting.WifiAutoUploadingActivity"></activity>
+        <activity android:name=".ui.activity.me.systemsetting.WifiAutoUploadingActivity" />
+        <activity android:name=".ui.activity.register.RegisterActivity"></activity>
     </application>
 
 </manifest>

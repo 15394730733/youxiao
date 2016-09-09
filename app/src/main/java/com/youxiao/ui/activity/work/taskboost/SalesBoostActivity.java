@@ -64,7 +64,6 @@ public class SalesBoostActivity extends BaseActivity implements View.OnClickList
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales_boost);
         super.init();
