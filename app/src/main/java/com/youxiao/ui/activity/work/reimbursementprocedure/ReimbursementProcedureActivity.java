@@ -17,7 +17,7 @@ import com.youxiao.base.BaseActivity;
 import com.youxiao.R;
 import com.youxiao.adapter.CommonAdapter;
 import com.youxiao.adapter.ViewHolder;
-import com.youxiao.util.SetListViewHeight;
+import com.youxiao.util.ListViewUtil;
 import com.youxiao.widget.Util;
 
 import java.util.ArrayList;
@@ -69,7 +69,7 @@ public class ReimbursementProcedureActivity extends BaseActivity {
                     @Override
                     public void onClick(View v, int position) {
                         mDatas.remove(mDatas.size()-1);
-                        SetListViewHeight.setListViewHeightBasedOnChildren(mListView_ReimbursementDetail);
+                        ListViewUtil.setListViewHeightBasedOnChildren(mListView_ReimbursementDetail);
                     }
                 }, R.id.id_tv_reimbursement_detail_cancel);
             }
@@ -91,7 +91,7 @@ public class ReimbursementProcedureActivity extends BaseActivity {
             public void onClick(View v) {
                 int i = mDatas.get(mDatas.size()-1);
                 mDatas.add( i+ 1);
-                SetListViewHeight.setListViewHeightBasedOnChildren(mListView_ReimbursementDetail);
+                ListViewUtil.setListViewHeightBasedOnChildren(mListView_ReimbursementDetail);
             }
         });
         mLinearLayout_Photo.setOnTouchListener(new View.OnTouchListener() {

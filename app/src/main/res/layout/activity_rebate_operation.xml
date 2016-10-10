@@ -8,14 +8,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/grey0">
 
         <RelativeLayout
             android:id="@+id/id_rl_title_bar"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/grey50">
+            android:layout_height="48dp"
+            android:background="@color/grey0">
 
             <include
                 android:id="@+id/id_ll_credit_note_collection_back"
@@ -49,7 +50,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="48dp"
             android:background="@drawable/background_selector"
             android:gravity="center_vertical">
 
@@ -82,16 +83,12 @@
             </LinearLayout>
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.3dp"
-            android:layout_marginLeft="16dp"
-            android:background="#ccc" />
+       <include layout="@layout/space_line_margin_left"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/grey50"
+            android:layout_height="48dp"
+            android:background="@color/grey0"
             android:gravity="center_vertical">
 
             <LinearLayout
@@ -125,15 +122,11 @@
             </RelativeLayout>
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.3dp"
-            android:layout_marginLeft="16dp"
-            android:background="#ccc" />
+        <include layout="@layout/space_line_margin_left"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="48dp"
             android:background="@color/grey50"
             android:gravity="center_vertical">
 
@@ -203,7 +196,8 @@
                 android:textColor="@color/grey400"
                 android:textColorHint="@color/grey400"
                 android:textSize="12sp"
-                android:gravity="start"/>
+                android:gravity="start"
+                android:background="@null"/>
         </LinearLayout>
     </LinearLayout>
 

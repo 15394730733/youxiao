@@ -206,10 +206,10 @@ public class ProcurementActivity extends BaseActivity implements View.OnClickLis
                 finish();
                 break;
             case R.id.ll_select_stock:
-                if (mFakeDialogLayout.getVisibility() == View.GONE) {
-                    mFakeDialogLayout.show(this,this);
-                } else if (mFakeDialogLayout.getVisibility() == View.VISIBLE) {
+                if (mFakeDialogLayout.isShown()) {
                     mFakeDialogLayout.hide();
+                } else {
+                    mFakeDialogLayout.show(this,this);
                 }
                 break;
             case R.id.id_iv_procurement_commit_and_search:

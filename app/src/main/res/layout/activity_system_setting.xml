@@ -231,7 +231,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -271,7 +271,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
 
                 </LinearLayout>
 
@@ -305,7 +305,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
 
                 </LinearLayout>
 
@@ -339,7 +339,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
 
                 </LinearLayout>
 
@@ -374,7 +374,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
 
                 </LinearLayout>
 
@@ -408,7 +408,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -447,7 +447,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
 
                 </LinearLayout>
 
@@ -482,7 +482,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
 
                 </LinearLayout>
 
@@ -517,7 +517,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
 
                 </LinearLayout>
 
@@ -551,7 +551,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
 
                 </LinearLayout>
             </LinearLayout>

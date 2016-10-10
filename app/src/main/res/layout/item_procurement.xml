@@ -5,9 +5,9 @@
     android:orientation="horizontal">
 
     <RelativeLayout
+        android:id="@+id/rl_commodity_name"
         android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_margin="5dp">
+        android:layout_height="48dp">
 
         <TextView
             android:id="@+id/id_tv_commodity_name"

@@ -13,7 +13,7 @@ import com.youxiao.ui.activity.sales.commodityselector.CommoditySearchActivity;
 import com.youxiao.R;
 import com.youxiao.adapter.CommonAdapter;
 import com.youxiao.adapter.ViewHolder;
-import com.youxiao.util.SetListViewHeight;
+import com.youxiao.util.ListViewUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,7 +76,7 @@ public class DisplayManagerActivity extends BaseActivity implements View.OnClick
             }
         };
         mListView_CreditNote.setAdapter(mAdapter);
-        SetListViewHeight.setListViewHeightBasedOnChildren(mListView_CreditNote);
+        ListViewUtil.setListViewHeightBasedOnChildren(mListView_CreditNote);
         mListView_CreditNote.setFocusable(false);
     }
 

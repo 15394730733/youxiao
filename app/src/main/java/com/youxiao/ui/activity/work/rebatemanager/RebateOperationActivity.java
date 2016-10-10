@@ -3,7 +3,6 @@ package com.youxiao.ui.activity.work.rebatemanager;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
@@ -46,7 +45,6 @@ public class RebateOperationActivity extends BaseActivity implements View.OnClic
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rebate_operation);
         super.init();

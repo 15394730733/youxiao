@@ -71,7 +71,7 @@ public class Legend extends ComponentBase {
     }
 
     public enum LegendVerticalAlignment {
-        TOP, CENTER, BOTTOM
+        TOP, CENTER, Gravity, BOTTOM
     }
 
     public enum LegendOrientation {

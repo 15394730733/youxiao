@@ -157,7 +157,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="16dp"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
                 </RelativeLayout>
 
                 <View
@@ -395,7 +395,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="16dp"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
                 </RelativeLayout>
 
 
@@ -495,7 +495,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="16dp"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
                 </RelativeLayout>
 
                 <View
@@ -622,7 +622,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="16dp"
-                        android:src="@drawable/jiantou_a" />
+                        android:src="@drawable/arrows_right_grey" />
                 </RelativeLayout>
 
                 <View
@@ -652,7 +652,7 @@
                         android:layout_height="18dp"
                         android:layout_gravity="center_vertical|right"
                         android:layout_marginRight="16dp"
-                        android:src="@drawable/jiantou_a"
+                        android:src="@drawable/arrows_right_grey"
                         android:visibility="visible" />
 
                     <ImageView
@@ -692,7 +692,7 @@
                         android:layout_height="18dp"
                         android:layout_gravity="center_vertical|right"
                         android:layout_marginRight="16dp"
-                        android:src="@drawable/jiantou_a"
+                        android:src="@drawable/arrows_right_grey"
                         android:visibility="visible" />
 
                     <ImageView

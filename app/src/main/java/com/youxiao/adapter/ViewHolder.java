@@ -11,12 +11,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
+import android.widget.Checkable;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-import com.youxiao.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +29,7 @@ import java.util.List;
 public class ViewHolder {
 
     private Context mContext;
-    private LayoutInflater mInflater;
+//    private LayoutInflater mInflater;
 
     // 当前的item位置
     private int mPosition;
@@ -52,8 +50,8 @@ public class ViewHolder {
     private ViewHolder(Context context, int layoutId, ViewGroup parent, int position) {
         mContext = context;
         mViews = new SparseArray<View>();
-        mInflater = LayoutInflater.from(context);
-        mConvertView = mInflater.inflate(layoutId, parent, false);
+//        mInflater = LayoutInflater.from(context);
+        mConvertView = LayoutInflater.from(context).inflate(layoutId, parent, false);
         mPosition = position;
         mConvertView.setTag(this);
     }
@@ -62,15 +60,14 @@ public class ViewHolder {
      * 由于Adapter中总是从本ViewHolder内得到mConvertView; 所以不是每次都要实例化viewHolder
      */
 
-    public static ViewHolder getViewHolder(Context context, View convertView, ViewGroup parent, int layoutId,
-                                           int position) {
+    public static ViewHolder getViewHolder(Context context, View convertView, ViewGroup parent,
+                                           int layoutId, int position) {
         if (convertView == null) {
             return new ViewHolder(context, layoutId, parent, position);
         } else {
             ViewHolder holder = (ViewHolder) convertView.getTag();
             // 更新ConvertView中的position
             holder.mPosition = position;
-
             return holder;
         }
     }
@@ -195,66 +192,38 @@ public class ViewHolder {
         return this;
     }
 
-
-    /**
-     * 设置checkbox
-     *
-     * @param viewId
-     */
-    public ViewHolder setCheckBox(int viewId) {
-        if (mPos == null) {
-            // 如果容器是第一次使用则实例化一个对象
-            mPos = new SparseBooleanArray();
-            mCheckedPosition = new ArrayList<Integer>();
-        }
-        final CheckBox cb = getView(viewId);
-        // 以指定的position作为Key取出容器中的boolean的值，如果没有这个值则默认为false;
-        cb.setChecked(mPos.get(mPosition));
-        cb.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 如果checkbox是被选中的时候存入容器
-                if (cb.isChecked()) {
-                    cb.setButtonDrawable(R.drawable.commit);
-
-                    mPos.put(mPosition, cb.isChecked());
-                    mCheckedPosition.add(mPosition);
-                } else {
-                    // 如果checkbox没有被选中时则从容器中移除去
-                    cb.setButtonDrawable(R.drawable.unselected);
-                    mPos.delete(mPosition);
-                    mCheckedPosition.remove((Integer) mPosition);
-                }
-            }
-        });
+    public ViewHolder setCheckable(int viewId, boolean checked) {
+        Checkable view = getView(viewId);
+        view.setChecked(checked);
         return this;
     }
-
 
 //    /**
 //     * 设置checkbox
 //     *
 //     * @param viewId
 //     */
-//    public ViewHolder setCheckImage(int viewId) {
+//    public ViewHolder setCheckBox(int viewId) {
 //        if (mPos == null) {
 //            // 如果容器是第一次使用则实例化一个对象
 //            mPos = new SparseBooleanArray();
 //            mCheckedPosition = new ArrayList<Integer>();
 //        }
-//        final ImageView iv = getView(viewId);
+//        final CheckBox cb = getView(viewId);
 //        // 以指定的position作为Key取出容器中的boolean的值，如果没有这个值则默认为false;
-//        iv.setImageResource(R.drawable.commit);
-////        iv.setChecked(mPos.get(mPosition));
-//        iv.setOnClickListener(new OnClickListener() {
+//        cb.setChecked(mPos.get(mPosition));
+//        cb.setOnClickListener(new OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                // 如果checkbox是被选中的时候存入容器
-//                if (iv.getDrawable() == mContext.getResources().getDrawable(R.drawable.commit)) {
+//                if (cb.isChecked()) {
+//                    cb.setButtonDrawable(R.drawable.commit);
+//
 //                    mPos.put(mPosition, cb.isChecked());
 //                    mCheckedPosition.add(mPosition);
 //                } else {
 //                    // 如果checkbox没有被选中时则从容器中移除去
+//                    cb.setButtonDrawable(R.drawable.unselected);
 //                    mPos.delete(mPosition);
 //                    mCheckedPosition.remove((Integer) mPosition);
 //                }
@@ -263,12 +232,39 @@ public class ViewHolder {
 //        return this;
 //    }
 
+
+    public ViewHolder setCheckTextColor(int viewId) {
+        if (mPos == null) {
+            // 如果容器是第一次使用则实例化一个对象
+            mPos = new SparseBooleanArray();
+            mCheckedPosition = new ArrayList<Integer>();
+        }
+        final TextView tv = getView(viewId);
+        // 以指定的position作为Key取出容器中的boolean的值，如果没有这个值则默认为false;
+        tv.setSelected(mPos.get(mPosition));
+        tv.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 如果checkbox是被选中的时候存入容器
+                if (tv.isSelected()) {
+                    mPos.put(mPosition, tv.isSelected());
+                    mCheckedPosition.add(mPosition);
+                } else {
+                    // 如果checkbox没有被选中时则从容器中移除去
+                    mPos.delete(mPosition);
+                    mCheckedPosition.remove((Integer) mPosition);
+                }
+            }
+        });
+        return this;
+    }
+
     /**
      * 返回被选中的checkBox的position集合
      *
      * @return
      */
-    public static List<Integer> getCheckedPosition() {
+    public List<Integer> getCheckedPosition() {
         return mCheckedPosition;
     }
 

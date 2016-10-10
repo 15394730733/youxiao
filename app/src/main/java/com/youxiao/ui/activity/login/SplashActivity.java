@@ -19,6 +19,7 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.youxiao.ui.activity.MainActivity;
 import com.youxiao.R;
+import com.youxiao.ui.activity.register.RegisterActivity;
 
 /**
  *
@@ -132,21 +133,16 @@ public class SplashActivity extends Activity implements OnClickListener{
     }
 
     public void onClick(View v) {
+        Intent intent = new Intent();
         switch (v.getId()) {
             case R.id.button1:
-//                GLOBAL.LAST_JOB_NO = sharedPreferences.getString("lastusername","");
-//                if (!GLOBAL.LAST_JOB_NO.equals("")) {
-//                    SharedPreferences.Editor editor = sharedPreferences.edit();
-//                    editor.putBoolean("userIsFirst",false);
-//                    editor.commit();
-//                    Intent intent = new Intent(SplashActivity.this, LockActivity.class);
-//                    startActivity(intent);
-//                    SplashActivity.this.finish();
-//                }else {
-//                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-//                }
+                intent.setClass(this,LoginActivity.class);
+                startActivity(intent);
                 break;
-
+            case R.id.button2:
+                intent.setClass(this, RegisterActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 }

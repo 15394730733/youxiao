@@ -11,7 +11,7 @@ import com.youxiao.adapter.CommonAdapter;
 import com.youxiao.adapter.ViewHolder;
 import com.youxiao.base.BaseActivity;
 import com.youxiao.ui.activity.sales.commodityselector.CommoditySearchActivity;
-import com.youxiao.util.SetListViewHeight;
+import com.youxiao.util.ListViewUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,7 +82,7 @@ public class CreditNoteManagerActivity extends BaseActivity implements View.OnCl
             }
         };
         mListView_CreditNote.setAdapter(mAdapter);
-        SetListViewHeight.setListViewHeightBasedOnChildren(mListView_CreditNote);
+        ListViewUtil.setListViewHeightBasedOnChildren(mListView_CreditNote);
     }
 
     @Override

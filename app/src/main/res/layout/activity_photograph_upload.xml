@@ -99,7 +99,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="16dp"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
 
             </RelativeLayout>
 

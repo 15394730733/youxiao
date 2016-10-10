@@ -289,7 +289,7 @@
                 <ImageView
                     android:layout_width="@dimen/x40"
                     android:layout_height="@dimen/x40"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
             </LinearLayout>
 
             <View
@@ -321,7 +321,7 @@
                 <ImageView
                     android:layout_width="@dimen/x40"
                     android:layout_height="@dimen/x40"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
             </LinearLayout>
 
             <View
@@ -353,7 +353,7 @@
                 <ImageView
                     android:layout_width="@dimen/x40"
                     android:layout_height="@dimen/x40"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
             </LinearLayout>
 
             <View
@@ -385,7 +385,7 @@
                 <ImageView
                     android:layout_width="@dimen/x40"
                     android:layout_height="@dimen/x40"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
             </LinearLayout>
 
             <View
@@ -417,7 +417,7 @@
                 <ImageView
                     android:layout_width="@dimen/x40"
                     android:layout_height="@dimen/x40"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
             </LinearLayout>
 
             <View
@@ -449,7 +449,7 @@
                 <ImageView
                     android:layout_width="@dimen/x40"
                     android:layout_height="@dimen/x40"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
             </LinearLayout>
 
             <View

@@ -115,7 +115,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
             </RelativeLayout>
 
             <View
@@ -147,7 +147,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
             </RelativeLayout>
 
             <View
@@ -179,7 +179,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
             </RelativeLayout>
 
             <View
@@ -210,7 +210,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
             </RelativeLayout>
 
             <View
@@ -241,7 +241,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
             </RelativeLayout>
 
             <View
@@ -273,7 +273,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
             </RelativeLayout>
         </LinearLayout>
 

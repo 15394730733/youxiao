@@ -7,13 +7,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.youxiao.R;
 import com.youxiao.base.BaseActivity;
-import com.youxiao.widget.OnPaneOpenAndCloseListener;
 import com.youxiao.ui.fragment.MeFragment;
 import com.youxiao.ui.fragment.MicroChatFragment;
 import com.youxiao.ui.fragment.SalesFragment;
@@ -25,43 +23,39 @@ import com.youxiao.ui.fragment.WorkFragment;
  *
  * @author StomHong
  */
-public class MainActivity extends BaseActivity implements View.OnClickListener, OnPaneOpenAndCloseListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private RelativeLayout mRelativeLayout_Marketing;
     private RelativeLayout mRelativeLayout_Work;
     private RelativeLayout mRelativeLayout_Statement;
     private RelativeLayout mRelativeLayout_MicroChat;
-    private RelativeLayout mMeLayout;
+    private RelativeLayout mRelativeLayout_Me;
 
-    private ImageView mImageView_Marketing;
+    private ImageView mImageView_Sales;
     private ImageView mImageView_Work;
     private ImageView mImageView_Statement;
     private ImageView mImageView_MicroChat;
     private ImageView mImageView_Me;
 
-    private TextView mTextView_Marketing;
+    private TextView mTextView_Sales;
     private TextView mTextView_Work;
     private TextView mTextView_Statement;
     private TextView mTextView_MicroChat;
     private TextView mTextView_Me;
 
-    private Fragment mSalesFragment;
-    private Fragment mWorkFragment;
-    private Fragment mMicroChatFragment;
-    private Fragment mStatementFragment;
-    private Fragment mMeFragment;
+    private SalesFragment mSalesFragment;
+    private WorkFragment mWorkFragment;
+    private MicroChatFragment mMicroChatFragment;
+    private StatementFragment mStatementFragment;
+    private MeFragment mMeFragment;
 
-    private static final int MARKETING = 0x000;
+    private static final int SALES = 0x000;
     private static final int WORK = 0x001;
     private static final int MICRO_CHAT = 0x002;
     private static final int STATEMENT = 0x003;
     private static final int ME = 0x004;
-    public LinearLayout mLinearLayout_Commit;
-    private LinearLayout mLinearLayout_MainTab;
-    private TextView mTextView_Commit;
 
-    private ViewClick mClick;
-
+    private MainActivityListener mListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,68 +66,84 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
 
     @Override
     public void initData() {
-        selectFragment(MARKETING);
-
+        selectFragment(SALES);
     }
 
     @Override
     public void initEvent() {
-
         mRelativeLayout_Marketing.setOnClickListener(this);
         mRelativeLayout_Work.setOnClickListener(this);
         mRelativeLayout_MicroChat.setOnClickListener(this);
         mRelativeLayout_Statement.setOnClickListener(this);
-        mMeLayout.setOnClickListener(this);
-        mTextView_Commit.setOnClickListener(this);
+        mRelativeLayout_Me.setOnClickListener(this);
+        mSalesFragment.setFragmentListener(new SalesFragment.SalesFragmentListener() {
+            @Override
+            public void doFragment(boolean tabSwitch) {
+               switchTab (tabSwitch);
+            }
+        });
     }
 
     @Override
     public void initView() {
 
-        mRelativeLayout_Marketing = (RelativeLayout) findViewById(R.id.rl_marketing);
+        mRelativeLayout_Marketing = (RelativeLayout) findViewById(R.id.rl_sales);
         mRelativeLayout_MicroChat = (RelativeLayout) findViewById(R.id.rl_micro_chat);
         mRelativeLayout_Statement = (RelativeLayout) findViewById(R.id.rl_statement);
-        mMeLayout = (RelativeLayout) findViewById(R.id.rl_me);
+        mRelativeLayout_Me = (RelativeLayout) findViewById(R.id.rl_me);
         mRelativeLayout_Work = (RelativeLayout) findViewById(R.id.rl_work);
 
-        mImageView_Marketing = (ImageView) findViewById(R.id.iv_main_marketing);
+        mImageView_Sales = (ImageView) findViewById(R.id.iv_main_marketing);
         mImageView_Work = (ImageView) findViewById(R.id.iv_main_work);
         mImageView_Statement = (ImageView) findViewById(R.id.iv_main_statement);
         mImageView_MicroChat = (ImageView) findViewById(R.id.iv_main_micro_chat);
         mImageView_Me = (ImageView) findViewById(R.id.iv_main_me);
 
-        mTextView_Marketing = (TextView) findViewById(R.id.tv_main_marketing);
+        mTextView_Sales = (TextView) findViewById(R.id.tv_main_marketing);
         mTextView_Work = (TextView) findViewById(R.id.tv_main_work);
         mTextView_Statement = (TextView) findViewById(R.id.tv_main_statement);
         mTextView_MicroChat = (TextView) findViewById(R.id.tv_main_micro_chat);
         mTextView_Me = (TextView) findViewById(R.id.tv_main_me);
 
-        mLinearLayout_Commit = (LinearLayout) findViewById(R.id.ll_marketing_commit);
-        mLinearLayout_MainTab = (LinearLayout) findViewById(R.id.ll_main_tab);
-        mTextView_Commit = (TextView) findViewById(R.id.tv_commit);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.rl_marketing:
-                selectFragment(MARKETING);
+            case R.id.rl_sales:
+                if (SalesFragment.COMMODITY_ISSELECTED) {
+                    mListener.doActivity(1);
+                } else {
+                    selectFragment(SALES);
+                }
                 break;
             case R.id.rl_work:
-                selectFragment(WORK);
+                if (SalesFragment.COMMODITY_ISSELECTED) {
+                    mListener.doActivity(2);
+                } else {
+                    selectFragment(WORK);
+                }
                 break;
             case R.id.rl_micro_chat:
-                selectFragment(MICRO_CHAT);
+                if (SalesFragment.COMMODITY_ISSELECTED) {
+                    mListener.doActivity(3);
+                } else {
+                    selectFragment(MICRO_CHAT);
+                }
                 break;
             case R.id.rl_statement:
-                selectFragment(STATEMENT);
+                if (SalesFragment.COMMODITY_ISSELECTED) {
+                    mListener.doActivity(4);
+                } else {
+                    selectFragment(STATEMENT);
+                }
                 break;
             case R.id.rl_me:
-                selectFragment(ME);
-                break;
-            case R.id.tv_commit:
-                mClick.onViewClick(mTextView_Commit);
-                onPaneOpenAndClose(false);
+                if (SalesFragment.COMMODITY_ISSELECTED) {
+                    mListener.doActivity(5);
+                } else {
+                    selectFragment(ME);
+                }
                 break;
             default:
                 break;
@@ -155,13 +165,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
         hideAllFragment(ft);
         int red = getResources().getColor(R.color.red400);
         switch (fragment) {
-            case MARKETING:
-                mImageView_Marketing.setImageResource(R.drawable.marketing_pre);
-                mTextView_Marketing.setTextColor(red);
+            case SALES:
+                mImageView_Sales.setImageResource(R.drawable.sales_pre);
+                mTextView_Sales.setTextColor(red);
                 if (mSalesFragment == null) {
-                    mSalesFragment = new SalesFragment();
-                    mClick = (ViewClick) mSalesFragment;
-                    ft.add(R.id.id_lay_container, mSalesFragment, "sales");
+                    ft.add(R.id.id_lay_container, mSalesFragment = new SalesFragment(), "sales");
                 } else {
                     ft.show(mSalesFragment);
                 }
@@ -170,8 +178,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 mImageView_Work.setImageResource(R.drawable.work_pre);
                 mTextView_Work.setTextColor(red);
                 if (mWorkFragment == null) {
-                    mWorkFragment = new WorkFragment();
-                    ft.add(R.id.id_lay_container, mWorkFragment, "work");
+                    ft.add(R.id.id_lay_container, mWorkFragment = new WorkFragment(), "work");
                 } else {
                     ft.show(mWorkFragment);
                 }
@@ -180,8 +187,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 mImageView_MicroChat.setImageResource(R.drawable.micro_chat_pre);
                 mTextView_MicroChat.setTextColor(red);
                 if (mMicroChatFragment == null) {
-                    mMicroChatFragment = new MicroChatFragment();
-                    ft.add(R.id.id_lay_container, mMicroChatFragment, "microChat");
+                    ft.add(R.id.id_lay_container, mMicroChatFragment = new MicroChatFragment(), "microChat");
                 } else {
                     ft.show(mMicroChatFragment);
                 }
@@ -190,8 +196,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 mImageView_Statement.setImageResource(R.drawable.statement_pre);
                 mTextView_Statement.setTextColor(red);
                 if (mStatementFragment == null) {
-                    mStatementFragment = new StatementFragment();
-                    ft.add(R.id.id_lay_container, mStatementFragment, "statement");
+                    ft.add(R.id.id_lay_container, mStatementFragment = new StatementFragment(), "statement");
                 } else {
                     ft.show(mStatementFragment);
                 }
@@ -200,8 +205,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 mImageView_Me.setImageResource(R.drawable.me_pre);
                 mTextView_Me.setTextColor(red);
                 if (mMeFragment == null) {
-                    mMeFragment = new MeFragment();
-                    ft.add(R.id.id_lay_container, mMeFragment, "me");
+                    ft.add(R.id.id_lay_container, mMeFragment = new MeFragment(), "me");
                 } else {
                     ft.show(mMeFragment);
                 }
@@ -216,18 +220,46 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
      * 重置所有Tab
      */
     private void resetAllTab() {
-        mImageView_Marketing.setImageResource(R.drawable.marketing);
+        mImageView_Sales.setImageResource(R.drawable.sales);
         mImageView_Work.setImageResource(R.drawable.work);
         mImageView_MicroChat.setImageResource(R.drawable.micro_chat);
         mImageView_Statement.setImageResource(R.drawable.statement);
         mImageView_Me.setImageResource(R.drawable.me);
 
         int grey = getResources().getColor(R.color.grey500);
-        mTextView_Marketing.setTextColor(grey);
+        mTextView_Sales.setTextColor(grey);
         mTextView_Work.setTextColor(grey);
         mTextView_Statement.setTextColor(grey);
         mTextView_MicroChat.setTextColor(grey);
         mTextView_Me.setTextColor(grey);
+    }
+
+    /**
+     * 切换tab的图片和文字
+     */
+    private void switchTab(boolean b) {
+        if (b){
+            resetAllTab();
+            mImageView_Sales.setImageResource(R.drawable.sales_pre);
+            mTextView_Sales.setTextColor(getResources().getColor(R.color.red400));
+            mTextView_Sales.setText("营销");
+            mTextView_Work.setText("工作");
+            mTextView_MicroChat.setText("微通");
+            mTextView_Statement.setText("报表");
+            mTextView_Me.setText("我");
+        }else {
+            mImageView_Sales.setImageResource(R.drawable.set_to_return_goods);
+            mImageView_Work.setImageResource(R.drawable.set_to_display);
+            mImageView_MicroChat.setImageResource(R.drawable.set_to_gift);
+            mImageView_Statement.setImageResource(R.drawable.turn_to_stock);
+            mImageView_Me.setImageResource(R.drawable.delete_line);
+            mTextView_Sales.setText("设为退货");
+            mTextView_Work.setText("设为陈列");
+            mTextView_MicroChat.setText("设为赠品");
+            mTextView_Statement.setText("转为存货");
+            mTextView_Me.setText("删除行");
+            mTextView_Sales.setTextColor(getResources().getColor(R.color.grey500));
+        }
     }
 
     /**
@@ -254,22 +286,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
             return;
         ft.hide(fragment);
     }
-
-    @Override
-    public void onPaneOpenAndClose(boolean visible) {
-        if (visible) {
-            mLinearLayout_Commit.setVisibility(View.VISIBLE);
-            mLinearLayout_MainTab.setVisibility(View.INVISIBLE);
-        } else {
-            mLinearLayout_Commit.setVisibility(View.INVISIBLE);
-            mLinearLayout_MainTab.setVisibility(View.VISIBLE);
-        }
+    /**
+     * 为了让Fragment能够响应Activity的操作而写的接口
+     */
+    public interface MainActivityListener {
+        void doActivity(int tabClicked);
     }
 
-
-    public interface ViewClick {
-
-        void onViewClick(View v);
+    public void setActivityListener(MainActivityListener listener) {
+        mListener = listener;
     }
-
 }

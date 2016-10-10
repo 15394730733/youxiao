@@ -25,7 +25,7 @@ import com.youxiao.R;
 import com.youxiao.adapter.CommonAdapter;
 import com.youxiao.adapter.ViewHolder;
 import com.youxiao.ui.activity.work.procurementmanager.SelectProviderActivity;
-import com.youxiao.util.SetListViewHeight;
+import com.youxiao.util.ListViewUtil;
 import com.youxiao.widget.Util;
 import com.youxiao.widget.WheelView;
 
@@ -159,7 +159,7 @@ public class ProcurementOrderFragment extends Fragment implements
 
         };
         mListView_ProcurementOrder.setAdapter(mAdapter);
-        SetListViewHeight.setListViewHeightBasedOnChildren(mListView_ProcurementOrder);
+        ListViewUtil.setListViewHeightBasedOnChildren(mListView_ProcurementOrder);
     }
 
     private void initView(View view) {

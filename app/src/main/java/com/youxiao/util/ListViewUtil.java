@@ -9,7 +9,7 @@ import android.widget.ListView;
  * @author StomHong
  * @since 2016-07-12
  */
-public class SetListViewHeight {
+public class ListViewUtil {
     /**
      * 根据ListView的item的高度总和，设置ListView的高度
      *

@@ -84,19 +84,22 @@
             android:name=".ui.activity.login.SplashActivity"
             android:configChanges="orientation|keyboard|keyboardHidden|navigation"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="nosensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.MainActivity" />
-        <activity android:name=".ui.activity.login.LoginActivity" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.activity.login.LoginActivity"
+            android:screenOrientation="nosensor" />
         <activity android:name=".ui.activity.login.LockActivity" />
         <activity android:name=".ui.activity.login.SetPassWordActivity" />
         <activity android:name=".ui.activity.login.SetServerPortActivity" />
-        <activity android:name=".ui.activity.sales.commodityselector.CommoditySelectorActivity" />
         <activity android:name=".ui.activity.work.notificationmanager.MyDocumentActivity" />
         <activity android:name=".ui.activity.work.taskreception.TaskReceptionActivity" />
         <activity android:name=".ui.activity.work.customermanager.CustomerManageActivity" />
@@ -108,24 +111,18 @@
         <activity android:name=".ui.activity.work.customermanager.CustomerDetailsActivity" />
         <activity android:name=".ui.activity.work.customermanager.CustomerSearchActivity" />
         <activity android:name=".ui.activity.me.systemsetting.SystemSettingActivity" />
-        <activity android:name=".ui.activity.sales.collectOrder.CommentActivity" />
-        <activity android:name=".ui.activity.sales.runOrderSelector.SkipperActivity" />
-        <activity android:name=".ui.activity.sales.runOrderSelector.SkipperDetailActivity" />
         <activity android:name=".ui.activity.sales.commodityselector.CommoditySearchActivity" />
-        <activity android:name=".ui.activity.sales.salesmodule.SalesTemplateActivity" />
         <activity android:name=".ui.activity.me.accountandsafety.SafetyActivity" />
         <activity android:name=".ui.activity.me.VersionInformationActivity" />
         <activity android:name=".ui.activity.me.aboutus.AboutUsActivity" />
         <activity android:name=".ui.activity.me.aboutus.FocusOnWeChatActivity" />
         <activity android:name=".ui.activity.sales.scancode.MipcaActivityCapture" />
-        <activity android:name=".ui.activity.sales.collectOrder.PaymentCodeActivity" />
         <activity android:name=".ui.activity.work.customermanager.AddNewCustomerActivity" />
         <activity android:name=".ui.activity.work.customermanager.SelectAccoutWayActivity" />
         <activity android:name=".ui.activity.work.customermanager.SelectDistributionRouteActivity" />
         <activity android:name=".ui.activity.work.customermanager.SelectPriceTypeActivity" />
         <activity android:name=".ui.activity.work.customermanager.SelectDisplayWayActivity" />
         <activity android:name=".ui.activity.work.customermanager.SelectCustomerAreaActivity" />
-        <activity android:name=".ui.activity.work.customermanager.CalendarActivity" />
         <activity android:name=".ui.activity.me.accountandsafety.RemoveBoundActivity" />
         <activity android:name=".ui.activity.me.accountandsafety.AmendPwdActivity" />
         <activity android:name=".ui.activity.statement.newcustomerquery.NewCustomerQueryActivity" />
@@ -168,8 +165,6 @@
         <activity android:name=".ui.activity.work.stockmanager.StockOperationActivity" />
         <activity android:name=".ui.activity.work.stockmanager.StockDetailActivity" />
         <activity android:name=".ui.activity.work.stockmanager.PolicyListActivity" />
-        <activity android:name=".ui.activity.work.rewardmanager.MatterRewardActivity" />
-        <activity android:name=".ui.activity.work.rewardmanager.CashRewardActivity" />
         <activity android:name=".ui.activity.work.displaymanager.DisplayOperationActivity" />
         <activity android:name=".ui.activity.work.displaymanager.DisplayDetailActivity" />
         <activity android:name=".ui.activity.work.rebatemanager.RebateOperationActivity" />
@@ -209,7 +204,14 @@
         <activity android:name=".ui.activity.me.systemsetting.CommoditySelectorActivity" />
         <activity android:name=".ui.activity.me.systemsetting.PrintSettingActivity" />
         <activity android:name=".ui.activity.me.systemsetting.WifiAutoUploadingActivity" />
-        <activity android:name=".ui.activity.register.RegisterActivity"></activity>
+        <activity android:name=".ui.activity.register.RegisterActivity" />
+        <activity android:name=".ui.activity.sales.settlement.SettlementActivity" />
+        <activity android:name=".ui.activity.me.personalinformation.PersonalInformationActivity" />
+        <activity android:name=".ui.activity.me.personalinformation.ProvinceActivity" />
+        <activity android:name=".ui.activity.me.personalinformation.CityActivity" />
+        <activity android:name=".ui.activity.login.FoundCompanyActivity" />
+        <activity android:name=".ui.activity.login.JoinExistingCompanyActivity" />
+        <activity android:name=".ui.activity.login.CompanyDetailActivity"></activity>
     </application>
 
 </manifest>

@@ -15,7 +15,7 @@ import com.youxiao.R;
 import com.youxiao.adapter.CommonAdapter;
 import com.youxiao.adapter.ViewHolder;
 import com.youxiao.ui.activity.sales.commodityselector.CommoditySearchActivity;
-import com.youxiao.util.SetListViewHeight;
+import com.youxiao.util.ListViewUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,7 +80,7 @@ public class CommodityBandFragment extends Fragment {
             }
         };
         mListView_CommodityBand.setAdapter(mAdapter);
-        SetListViewHeight.setListViewHeightBasedOnChildren(mListView_CommodityBand);
+        ListViewUtil.setListViewHeightBasedOnChildren(mListView_CommodityBand);
         mListView_CommodityBand.setFocusable(false);
     }
 

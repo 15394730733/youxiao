@@ -79,7 +79,7 @@
                     android:layout_height="16dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="16dp"
-                    android:src="@drawable/jiantou_a" />
+                    android:src="@drawable/arrows_right_grey" />
 
             </LinearLayout>
 

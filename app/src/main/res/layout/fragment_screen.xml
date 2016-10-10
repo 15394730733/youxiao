@@ -65,7 +65,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:src="@drawable/jiantou_a" />
+                android:src="@drawable/arrows_right_grey" />
         </RelativeLayout>
 
         <View
@@ -99,7 +99,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:src="@drawable/jiantou_a" />
+                android:src="@drawable/arrows_right_grey" />
         </RelativeLayout>
 
         <View
@@ -133,7 +133,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:src="@drawable/jiantou_a" />
+                android:src="@drawable/arrows_right_grey" />
         </RelativeLayout>
     </LinearLayout>
 

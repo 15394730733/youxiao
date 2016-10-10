@@ -14,10 +14,12 @@ import android.view.ViewGroup;
  */
 public abstract class BaseFragment extends Fragment {
 
+    private Context mContext;
 
     @Override
-    public void onAttach(Context context) {
+    public final void onAttach(Context context) {
         super.onAttach(context);
+        mContext = context;
     }
 
     @Override
@@ -27,8 +29,8 @@ public abstract class BaseFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(getRootView(),container);
+    public final View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v = inflater.inflate(getRootView(),null);
         initView(v);
         initData();
         initEvent();
@@ -43,6 +45,9 @@ public abstract class BaseFragment extends Fragment {
     public abstract void initData();
 
     public abstract void initEvent();
+    public Context getContext(){
+        return mContext;
+    }
 
 
 }

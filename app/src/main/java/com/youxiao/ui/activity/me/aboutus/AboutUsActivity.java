@@ -1,12 +1,10 @@
 package com.youxiao.ui.activity.me.aboutus;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -16,13 +14,14 @@ import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
 import com.youxiao.R;
+import com.youxiao.base.BaseActivity;
 
 import java.io.ByteArrayOutputStream;
 
 /**
  * 关于我们
  */
-public class AboutUsActivity extends Activity implements View.OnClickListener {
+public class AboutUsActivity extends BaseActivity implements View.OnClickListener {
 
     private LinearLayout back;
     private RelativeLayout officialWebsite, focusOnWeChat, shareWeChat, feedback;
@@ -31,15 +30,13 @@ public class AboutUsActivity extends Activity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        initView();
-        initEvent();
-        initData();
+        super.init();
     }
 
-    private void initView() {
+    @Override
+    public void initView() {
         back = (LinearLayout) findViewById(R.id.activity_about_us_back);
         officialWebsite = (RelativeLayout) findViewById(R.id.activity_about_us_official_website);
         focusOnWeChat = (RelativeLayout) findViewById(R.id.activity_about_us_Focus_on_WeChat);
@@ -47,7 +44,8 @@ public class AboutUsActivity extends Activity implements View.OnClickListener {
         feedback = (RelativeLayout) findViewById(R.id.activity_about_us_feedback);
     }
 
-    private void initEvent() {
+    @Override
+    public void initEvent() {
         back.setOnClickListener(this);
         officialWebsite.setOnClickListener(this);
         focusOnWeChat.setOnClickListener(this);
@@ -55,7 +53,8 @@ public class AboutUsActivity extends Activity implements View.OnClickListener {
         feedback.setOnClickListener(this);
     }
 
-    private void initData() {
+    @Override
+    public void initData() {
         //注册api到微信
         api = WXAPIFactory.createWXAPI(this, APP_ID, true);
         api.registerApp(APP_ID);

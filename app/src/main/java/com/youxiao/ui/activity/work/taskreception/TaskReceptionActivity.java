@@ -17,7 +17,7 @@ import com.youxiao.R;
 import com.youxiao.adapter.CommonAdapter;
 import com.youxiao.adapter.ViewHolder;
 import com.youxiao.base.BaseActivity;
-import com.youxiao.util.SetListViewHeight;
+import com.youxiao.util.ListViewUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,7 +94,7 @@ public class TaskReceptionActivity extends BaseActivity implements View.OnClickL
 
         };
         mListView_TaskReception.setAdapter(mAdapter);
-        SetListViewHeight.setListViewHeightBasedOnChildren(mListView_TaskReception);
+        ListViewUtil.setListViewHeightBasedOnChildren(mListView_TaskReception);
         mListView_TaskReception.setFocusable(false);
     }
 

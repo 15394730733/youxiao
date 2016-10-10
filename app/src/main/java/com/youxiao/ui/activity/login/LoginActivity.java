@@ -14,7 +14,6 @@ import com.youxiao.base.BaseActivity;
 
 /**
  * 登录页面
- * 正在重构
  */
 public class LoginActivity extends BaseActivity implements OnClickListener {
 
@@ -68,7 +67,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 
     public void initView() {
         mButton_Login = (Button) findViewById(R.id.id_btn_login_login);
-        mImageView_Loading = (ImageView) findViewById(R.id.id_iv_loading);
+//        mImageView_Loading = (ImageView) findViewById(R.id.id_iv_loading);
 
         mEditText_Password = (EditText) findViewById(R.id.id_et_login_user_password);
         mEditText_Account = (EditText) findViewById(R.id.id_et_login_user_name);

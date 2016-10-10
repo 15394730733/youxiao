@@ -10,7 +10,7 @@ import com.youxiao.R;
 import com.youxiao.adapter.CommonAdapter;
 import com.youxiao.adapter.ViewHolder;
 import com.youxiao.base.BaseActivity;
-import com.youxiao.util.SetListViewHeight;
+import com.youxiao.util.ListViewUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,7 @@ public class BillDetailActivity extends BaseActivity {
 
         };
         mListView_BillDetail.setAdapter(mAdapter);
-        SetListViewHeight.setListViewHeightBasedOnChildren(mListView_BillDetail);
+        ListViewUtil.setListViewHeightBasedOnChildren(mListView_BillDetail);
     }
 
     @Override
