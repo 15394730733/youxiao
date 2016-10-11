@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * @author StomHong
+ * @author StomHong啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
  * @since 2016-3-29
  */
 public class App extends Application {
