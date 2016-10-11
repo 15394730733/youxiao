@@ -1,7 +1,6 @@
 package com.youxiao.adapter;
 
 import java.util.List;
-
 import com.youxiao.R;
 
 import android.content.Context;
