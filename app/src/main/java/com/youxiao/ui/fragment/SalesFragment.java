@@ -113,7 +113,6 @@ public class SalesFragment extends BaseFragment implements View.OnClickListener 
         }
 
     }
-
     /**
      * 初始化数据
      */
@@ -152,6 +151,7 @@ public class SalesFragment extends BaseFragment implements View.OnClickListener 
         for (int i = 1; i < 20; i++) {
             mDatasRight.add("金锣肉粒多200g" + i);
         }
+
         mListView_LeftOne.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.item_one_text, mDatas));
         mListView_LeftTwo.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.item_one_text, mDatas));
         mListView_LeftThree.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.item_one_text, mDatas));
@@ -172,8 +172,10 @@ public class SalesFragment extends BaseFragment implements View.OnClickListener 
         mSelectedAdapter = new CommonAdapter<Sales>(getActivity(), mData, R.layout.item_sales) {
             @Override
             public void convert(final ViewHolder holder, final Sales sales) {
+                //商品赋值
                 holder.setText(R.id.id_tv_commodity_name, sales.getName());
-                if (sales.isSelect()) {//如果是选中的则改变字体颜色
+                if (sales.isSelect()) {
+                    //如果是选中的则改变字体颜色
                     holder.setTextColor(R.id.id_tv_commodity_name, getResources().getColor(R.color.red400));
                     holder.setTextColor(R.id.id_tv_commodity_bulk, getResources().getColor(R.color.red400));
                     holder.setTextColor(R.id.id_tv_commodity_entire, getResources().getColor(R.color.red400));
@@ -182,6 +184,7 @@ public class SalesFragment extends BaseFragment implements View.OnClickListener 
                     holder.setTextColor(R.id.id_tv_commodity_bulk, getResources().getColor(R.color.grey700));
                     holder.setTextColor(R.id.id_tv_commodity_entire, getResources().getColor(R.color.grey700));
                 }
+
                 if (COMMODITY_ISSELECTED) {
                     if (sales.isSelect()) {
                         switch (tabIndex) {
@@ -288,6 +291,7 @@ public class SalesFragment extends BaseFragment implements View.OnClickListener 
                         mSelectedAdapter.notifyDataSetChanged();
                         Toast.makeText(getActivity(), "转为存货", Toast.LENGTH_SHORT).show();
                         break;
+
                     case 5://删除行
                         for (int i = mData.size() - 1; i >= 0; i--) {
                             if (mData.get(i).isSelect()) {

@@ -5,45 +5,51 @@ package com.youxiao.entity;
  */
 
 public class Sales {
+
+    /**
+     * 商品id
+     */
+    public String id;
+
     /**
      * 商品名称
      */
-    private String name;
+    public String name;
     /**
      * 商品重量
      */
-    private String weight;
+    public String weight;
     /**
      * 商品数量
      */
-    private String box;
+    public String box;
     /**
      * 单价
      */
-    private float unitPrice;
+    public float unitPrice;
     /**
      * 箱价
      */
-    private float boxPrice;
+    public float boxPrice;
     /**
      * 散货数量
      */
-    private String unitQuantity;
+    public String unitQuantity;
     /**
      * 整箱数量
      */
-    private String boxQuantity;
+    public String boxQuantity;
     /**
      * 生产日期
      */
-    private String produceDate;
+    public String produceDate;
     /**
      * 是否选中
      */
-    private boolean isSelect;
+    public boolean isSelect;
 
     public Sales(String name, String weight, String box, float unitPrice, float boxPrice,
-                 String unitQuantity, String boxQuantity, String produceDate,boolean isSelect) {
+                 String unitQuantity, String boxQuantity, String produceDate, boolean isSelect) {
         this.name = name;
         this.weight = weight;
         this.box = box;
