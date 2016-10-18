@@ -29,11 +29,14 @@ public abstract class BaseFragment extends Fragment {
 
     @Nullable
     @Override
-    public final View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(getRootView(),null);
+
+
         initView(v);
         initData();
         initEvent();
+
         return v;
 
     }

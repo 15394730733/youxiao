@@ -10,7 +10,7 @@ import com.youxiao.ui.activity.login.MyApplication;
  */
 public class SpUtil {
     //    public static final String BASE_URL = "http://114.55.61.94:8080/youxiaoservice";//接口地址
-    public static final String BASE_URL = "http://192.168.0.191:8080/youxiaoApp";
+    public static final String BASE_URL = "http://114.55.61.94:8089/youxiaoApp";
     private static final String sp_name = "config";
     public static final String USER_NAME = "username";
     public static final String PWD = "pwd";

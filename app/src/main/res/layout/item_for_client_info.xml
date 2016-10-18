@@ -10,7 +10,7 @@
 
 
         <TextView
-            android:id="@+id/id_client_manage_client_name"
+            android:id="@+id/client_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -19,6 +19,7 @@
             android:textSize="14sp" />
 
         <TextView
+            android:id="@+id/tv_A"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_alignParentRight="true"
@@ -49,7 +50,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/id_client_manage_client_location"
+                android:id="@+id/client_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
@@ -59,7 +60,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/id_client_manage_visit_time"
+                android:id="@+id/last_visit_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -85,7 +86,7 @@
                     android:src="@drawable/ding2x" />
 
                 <TextView
-                    android:id="@+id/id_client_manage_distance"
+                    android:id="@+id/client_distance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|end"
@@ -98,7 +99,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/id_client_manage_visit_state"
+                android:id="@+id/visit_state"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="16dp"

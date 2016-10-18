@@ -58,7 +58,6 @@ public class RemoveBoundActivity extends BaseActivity implements View.OnClickLis
                     intent.setClass(RemoveBoundActivity.this, SafetyActivity.class);
                     startActivity(intent);
 
-
                 } else {
                     ToastUtil.show("" + result);
                 }

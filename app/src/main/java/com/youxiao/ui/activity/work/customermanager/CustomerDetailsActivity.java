@@ -7,8 +7,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.youxiao.base.BaseActivity;
+import com.youxiao.model.CustomerManagerBean;
 import com.youxiao.ui.fragment.BasicInfoFragment;
 import com.youxiao.ui.fragment.MapLocationFragment;
 import com.youxiao.ui.fragment.RouteAdjustmentFragment;
@@ -38,6 +40,9 @@ public class CustomerDetailsActivity extends BaseActivity implements View.OnClic
     private LinearLayout mLinearLayout_VisitState;
     private LinearLayout mLinearLayout_GeographicalLocation;
     private LinearLayout mLinearLayout_Back;
+    private CustomerManagerBean.Customer customer;
+    private TextView teShopName;
+    private TextView getTeShopAddress;
 
     /**
      * 枚举
@@ -54,7 +59,7 @@ public class CustomerDetailsActivity extends BaseActivity implements View.OnClic
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_details);
-
+        customer = (CustomerManagerBean.Customer) getIntent().getSerializableExtra("customer");
         super.init();
     }
 
@@ -70,8 +75,11 @@ public class CustomerDetailsActivity extends BaseActivity implements View.OnClic
         mLinearLayout_GeographicalLocation = (LinearLayout) findViewById(R.id.id_lay_client_details_geographical_location);
         mLinearLayout_RouteAdjust = (LinearLayout) findViewById(R.id.id_lay_client_details_route_adjustment);
         mLinearLayout_VisitState = (LinearLayout) findViewById(R.id.id_lay_client_details_visit_state);
-
         mLinearLayout_Back = (LinearLayout) findViewById(R.id.id_lay_client_details_back);
+
+        teShopName = (TextView) findViewById(R.id.supermarker_name);
+        getTeShopAddress = (TextView) findViewById(R.id.supermarker_address);
+
     }
 
     @Override
@@ -88,6 +96,8 @@ public class CustomerDetailsActivity extends BaseActivity implements View.OnClic
         mLinearLayout_GeographicalLocation.setOnClickListener(this);
         mLinearLayout_BasicInfo.setOnClickListener(this);
         mLinearLayout_Back.setOnClickListener(this);
+        teShopName.setText(customer.custName);
+        getTeShopAddress.setText(customer.locateAddress);
     }
 
     /**
@@ -109,6 +119,23 @@ public class CustomerDetailsActivity extends BaseActivity implements View.OnClic
                 mView_BasicInfo.setVisibility(View.VISIBLE);
                 if (mBasicInfoFragment == null) {
                     mBasicInfoFragment = new BasicInfoFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("custId", String.valueOf(customer.custId));//客户id
+                    bundle.putString("custName", customer.custName);//客户名称
+                    bundle.putString("contact", customer.customerPicture);//客户图片地址
+                    bundle.putString("telNo", customer.telNo);//客户电话
+                    bundle.putString("mobilea", String.valueOf(customer.mobilea));//移动电话A
+                    bundle.putString("mobileb", String.valueOf(customer.mobileb));//移动电话B
+                    bundle.putString("Addresss", customer.locateAddress);//客户地址
+                    bundle.putString("customerTypeName", customer.customerTypeName);//客户类型
+                    bundle.putString("line", customer.lineIdName);//分配线路
+                    bundle.putString("customerArea", customer.customerArea);//客户区域
+                    bundle.putString("Pricetype", customer.priceTypeName);//价格类型
+                    bundle.putString("displayName", customer.displayName);//陈列方式
+                    bundle.putString("balance", customer.checkoutStatusName);//结算方式
+                    bundle.putString("displayArea", String.valueOf(customer.displayArea));//陈列面积
+                    bundle.putString("businessArea", String.valueOf(customer.operatingArea));//营业面积
+                    mBasicInfoFragment.setArguments(bundle);
                     ft.add(R.id.id_lay_client_details_for_tab, mBasicInfoFragment);
                 } else {
                     ft.show(mBasicInfoFragment);
@@ -139,6 +166,11 @@ public class CustomerDetailsActivity extends BaseActivity implements View.OnClic
                 mView_GeographicalLocation.setVisibility(View.VISIBLE);
                 if (mGeographicalLocationFragment == null) {
                     mGeographicalLocationFragment = new MapLocationFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putDouble("lat", customer.gpsN);
+                    bundle.putDouble("lon", customer.gpsE);
+                    mGeographicalLocationFragment.setArguments(bundle);
+
                     ft.add(R.id.id_lay_client_details_for_tab, mGeographicalLocationFragment);
                 } else {
                     ft.show(mGeographicalLocationFragment);
@@ -157,7 +189,6 @@ public class CustomerDetailsActivity extends BaseActivity implements View.OnClic
      * 重置所有Tab
      */
     private void resetAllTab() {
-
         mView_BasicInfo.setVisibility(View.INVISIBLE);
         mView_VisitState.setVisibility(View.INVISIBLE);
         mView_GeographicalLocation.setVisibility(View.INVISIBLE);

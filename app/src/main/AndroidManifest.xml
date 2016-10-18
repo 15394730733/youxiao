@@ -67,9 +67,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="aj0y9Of5KZE0CZUed75pyaqSv40C3ufY" />
+            android:value="8wYqqZwyQk5T2TouDLQyblm7QtvmL0Hz" />
+        <!--android:value="aj0y9Of5KZE0CZUed75pyaqSv40C3ufY" />-->
+        />
 
         <service
             android:name="com.baidu.location.f"
@@ -91,7 +94,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.MainActivity" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="nosensor" />
         <activity android:name=".ui.activity.login.LoginActivity" />
         <activity android:name=".ui.activity.login.LockActivity" />
         <activity android:name=".ui.activity.login.SetPassWordActivity" />
@@ -116,7 +121,7 @@
         <activity android:name=".ui.activity.me.accountandsafety.SafetyActivity" />
         <activity android:name=".ui.activity.me.VersionInformationActivity" />
         <activity android:name=".ui.activity.me.aboutus.AboutUsActivity" />
-        <activity android:name="com.youxiao.ui.activity.sales.salesmodule.TestActivity"/>
+        <activity android:name="com.youxiao.ui.activity.sales.salesmodule.TestActivity" />
         <activity android:name=".ui.activity.me.aboutus.FocusOnWeChatActivity" />
         <activity android:name=".ui.activity.sales.scancode.MipcaActivityCapture" />
         <!--<activity android:name=".ui.activity.sales.collectOrder.PaymentCodeActivity" />-->
@@ -209,7 +214,7 @@
         <activity android:name=".ui.activity.me.aboutus.OfficialWebsiteActivity" />
         <activity android:name=".ui.activity.me.systemsetting.CommoditySelectorActivity" />
         <activity android:name=".ui.activity.me.systemsetting.PrintSettingActivity" />
-        <activity android:name="com.youxiao.ui.activity.sales.salesmodule.SearchActivity"/>
+        <activity android:name="com.youxiao.ui.activity.sales.salesmodule.SearchActivity" />
         <activity android:name=".ui.activity.me.systemsetting.WifiAutoUploadingActivity" />
         <activity android:name=".ui.activity.register.RegisterActivity"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->

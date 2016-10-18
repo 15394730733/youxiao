@@ -1,7 +1,10 @@
 package com.youxiao.ui.fragment;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SlidingPaneLayout;
 import android.support.v7.app.AlertDialog;
@@ -21,6 +24,7 @@ import com.youxiao.adapter.CommonAdapter;
 import com.youxiao.adapter.ViewHolder;
 import com.youxiao.base.BaseFragment;
 import com.youxiao.entity.Sales;
+import com.youxiao.model.SearchResultBean;
 import com.youxiao.ui.activity.MainActivity;
 import com.youxiao.ui.activity.me.systemsetting.CommoditySelectorActivity;
 import com.youxiao.ui.activity.sales.settlement.SettlementActivity;
@@ -33,7 +37,9 @@ import com.youxiao.widget.Util;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 营销页面ddddddddd黄庆方提交
@@ -88,10 +94,17 @@ public class SalesFragment extends BaseFragment implements View.OnClickListener 
     //点击的tab标号
     private int tabIndex;
     private boolean textColorFlag = false;
-
+    private List<Map<String, Object>> data = new ArrayList<>();
+    private List<String> idString = new ArrayList<>();
+    private Map<String, Object> map;
+    private MyBroadcastReceiver receiver;
 
     @Override
     protected int getRootView() {
+        //用于接收搜索界面传递过来的数据
+        IntentFilter filter = new IntentFilter("com.youxiao.ui.fragment.SalesFragment.SlidingListener.onPanelClosed");
+        receiver = new MyBroadcastReceiver();
+        getActivity().registerReceiver(receiver, filter);
         return R.layout.item_fragment_sales;
     }
 
@@ -196,6 +209,7 @@ public class SalesFragment extends BaseFragment implements View.OnClickListener 
                                 holder.setViewVisibility(R.id.tv_rotate, true);
                                 holder.setText(R.id.tv_rotate, "陈列");
                                 break;
+
                             case 3:
                                 holder.setViewVisibility(R.id.tv_rotate, true);
                                 holder.setText(R.id.tv_rotate, "赠品");
@@ -313,6 +327,7 @@ public class SalesFragment extends BaseFragment implements View.OnClickListener 
                         break;
                 }
             }
+
         });
     }
 
@@ -484,6 +499,33 @@ public class SalesFragment extends BaseFragment implements View.OnClickListener 
 
         }
     }
+    class MyBroadcastReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            //获取到从搜索界面传递过来的commodity对象
+            SearchResultBean.CommodityBean.Commodity commodity = (SearchResultBean.CommodityBean.Commodity) intent.getSerializableExtra("commodity");
+            map = new HashMap<>();
+            int id = commodity.id;
+            if (!idString.contains(String.valueOf(id))) {
+                idString.add(String.valueOf(id));
+                map.put("id", commodity.id);//商品编号
+                map.put("name", commodity.cmdtyName);//商品名称
+                map.put("num", commodity.cmdtyType);//规格
+                map.put("desc", "0");//库存
+                map.put("bigUnit", commodity.nonretailUnit);//大单位
+                map.put("smallUnit", commodity.retailUnit);//小单位
+                map.put("bigUnitNum", "1");//大数量
+                map.put("smallUnitNum", "1");//小数量
+                map.put("bigPrice", commodity.bigBuyPrice);//大单价
+                map.put("smallPrice", commodity.buyPrice);//小单价
+                map.put("sumPrice", commodity.sum);//合计  横排
+                map.put("time", commodity.productionDate);//生产日期
+                data.add(map);
+
+            }
+        }
+    }
+
 
     private class RightItemClickListener implements ListView.OnItemClickListener {
         @Override

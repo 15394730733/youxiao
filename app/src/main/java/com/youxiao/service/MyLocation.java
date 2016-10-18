@@ -52,6 +52,9 @@ public class MyLocation implements BDLocationListener {
 
     @Override
     public void onReceiveLocation(BDLocation location) {
+        if (location!=null){
+
+        }
 
     }
 
@@ -80,4 +83,5 @@ public class MyLocation implements BDLocationListener {
         LatLng Point2 = new LatLng(lat2, lng2);
         return calcDistance(Point1, Point2);
     }
+
 }

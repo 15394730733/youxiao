@@ -19,13 +19,15 @@ import android.widget.TextView;
 import com.youxiao.R;
 import com.youxiao.adapter.CommonAdapter;
 import com.youxiao.base.BaseActivity;
+import com.youxiao.model.CustomerManagerBean;
 
+import java.util.ArrayList;
 import java.util.List;
-
 
 
 /**
  * 客户搜索
+ *
  * @author StomHong
  * @since 2016-3-25
  */
@@ -42,14 +44,18 @@ public class CustomerSearchActivity extends BaseActivity implements View.OnClick
     private List<String> mDatas;
     private String searchContent;
     private CommonAdapter<String> adapter;
-
     private SharedPreferences sharedPreferences;
+    private List<CustomerManagerBean.Customer> customerList;
+    private CustomerManagerBean.Customer customer;
+
+    private String Words;
+    private String Number;
+    private int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_search);
-
         super.init();
     }
 
@@ -84,12 +90,24 @@ public class CustomerSearchActivity extends BaseActivity implements View.OnClick
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                searchContent = s.toString();
+                customerList = new ArrayList<CustomerManagerBean.Customer>();
+                if (customerList != null) {
+                    for (int i = 0; i < customerList.size(); i++) {
+                        customer = customerList.get(i);
+                        Words = customer.custName;
+                        Number = String.valueOf(customer.custId);
+                        id = customer.id;//
+                        if (Words.contains(searchContent) || Number.contains(searchContent)) {
 
+                        }
+                    }
+                }
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (mDatas != null){
+                if (mDatas != null) {
                     mDatas.clear();
                     adapter.notifyDataSetChanged();
                 }

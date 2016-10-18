@@ -2,6 +2,7 @@ package com.youxiao.ui.activity.login;
 
 import android.os.Bundle;
 
+import com.baidu.mapapi.SDKInitializer;
 import com.youxiao.R;
 import com.youxiao.base.BaseActivity;
 
@@ -14,6 +15,7 @@ public class CompanyDetailActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company_detail);
+
         super.init();
     }
 

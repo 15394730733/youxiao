@@ -6,8 +6,13 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -17,22 +22,39 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.baidu.location.BDLocation;
+import com.baidu.location.BDLocationListener;
+import com.baidu.location.LocationClient;
+import com.baidu.location.LocationClientOption;
+import com.baidu.mapapi.SDKInitializer;
+import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.navi.BaiduMapAppNotSupportNaviException;
 import com.baidu.mapapi.navi.BaiduMapNavigation;
 import com.baidu.mapapi.navi.NaviParaOption;
 import com.baidu.mapapi.utils.route.BaiduMapRoutePlan;
+import com.google.gson.Gson;
+import com.youxiao.adapter.CustomerManagerAdapter;
 import com.youxiao.base.BaseActivity;
+import com.youxiao.model.CustomerManagerBean;
+import com.youxiao.ui.activity.login.MyApplication;
 import com.youxiao.ui.activity.work.contractsignature.ContractSignatureActivity;
 import com.youxiao.ui.activity.work.marketpatrol.MarketPatrolActivity;
 import com.youxiao.ui.activity.work.photomanager.PhotographUploadActivity;
 import com.youxiao.ui.fragment.SalesFragment;
 import com.youxiao.R;
 import com.youxiao.adapter.CommonAdapter;
-import com.youxiao.adapter.ViewHolder;
+import com.youxiao.util.SpUtil;
+import com.youxiao.util.ToastUtil;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 客户档案
@@ -46,6 +68,7 @@ public class CustomerManageActivity extends BaseActivity implements View.OnClick
     private static final String TAG = CustomerManageActivity.class.getSimpleName();
 
     public Context context;
+    private JSONObject jsonObject;
     private ImageView mImageView_AddClient;
 
     private TextView mTextView_SortByVisitor;
@@ -57,26 +80,61 @@ public class CustomerManageActivity extends BaseActivity implements View.OnClick
     private LinearLayout mLinearLayout_Search;
     private LinearLayout mLinearLayout_Sort;
     private LinearLayout mLinearLayout_SortWay;
+    private CustomerManagerAdapter customerManagerAdapter;
 
     private ListView mListView_Client;
     private CommonAdapter<String> mAdapter;
+    private ArrayList<CustomerManagerBean.Customer> data;
     private View mView_Shadow;
-    private List<String> mData;
+    private CustomerManagerBean customerManagerBean;
+
+    // 定位相关声明
+
+    public BaiduMap baiduMap;
+    public LocationClient locationClient;
+    private double meLat;
+    private double meLon;
+
+    private Handler handler = new Handler() {
+        public void handleMessage(Message msg) {
+            try {
+                boolean flag = jsonObject.getBoolean("flag");
+                String result = jsonObject.getString("result");
+                if (flag) {
+                    Gson gson = new Gson();
+                    customerManagerBean = gson.fromJson(jsonObject + "", CustomerManagerBean.class);
+                    data = customerManagerBean.data;
+                    LatLng lng=new LatLng(meLat,meLon);
+                    CustomerManagerAdapter customerManagerAdapter = new CustomerManagerAdapter(context, data,lng);
+                    mListView_Client.setAdapter(customerManagerAdapter);
+
+                } else {
+                    ToastUtil.show("暂无数据");
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    };
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
+        SDKInitializer.initialize(this);
+        locationClient = new LocationClient(this); // 实例化LocationClient类
+        locationClient.registerLocationListener(myListener); // 注册监听函数
+        this.setLocationOption();    //设置定位参数
+        locationClient.start();
         setContentView(R.layout.activity_client_manage);
         context = this;
-
-        super.init();
+        init();
+        getInfo();
     }
 
     @Override
     public void initView() {
-
         mTextView_SortByDistance = (TextView) findViewById(R.id.id_client_manage_sort_distance);
         mTextView_SortByName = (TextView) findViewById(R.id.id_client_manage_sort_name);
         mTextView_SortByTime = (TextView) findViewById(R.id.id_client_manage_sort_time);
@@ -94,18 +152,19 @@ public class CustomerManageActivity extends BaseActivity implements View.OnClick
 
     @Override
     public void initData() {
-        mData = new ArrayList<>();
-        for (int i = 0; i < 14; i++) {
-            mData.add("");
-        }
-        mAdapter = new CommonAdapter<String>(context, mData, R.layout.item_for_client_info) {
+        //listview条目点击事件
+        mListView_Client.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void convert(ViewHolder holder, String s) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                CustomerManagerBean.Customer customer = data.get(position);
+                Intent intent = new Intent(context, CustomerDetailsActivity.class);
+                intent.putExtra("customer", customer);
+                startActivity(intent);
 
             }
-        };
-        mListView_Client.setAdapter(mAdapter);
+        });
     }
+
 
     /**
      * 警告弹窗，询问是否使用百度地图导航
@@ -123,6 +182,7 @@ public class CustomerManageActivity extends BaseActivity implements View.OnClick
 
                 } else {
                     BaiduMapRoutePlan.setSupportWebRoute(true);
+
                 }
                 dialog.dismiss();
             }
@@ -135,8 +195,6 @@ public class CustomerManageActivity extends BaseActivity implements View.OnClick
         });
         builder.show();
     }
-
-
 
 
     /**
@@ -158,6 +216,30 @@ public class CustomerManageActivity extends BaseActivity implements View.OnClick
             return false;
         }
     }
+
+    private void setLocationOption() {
+        LocationClientOption option = new LocationClientOption();
+        option.setOpenGps(true); // 打开GPS
+        option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);// 设置定位模式
+        option.setCoorType("bd09ll"); // 返回的定位结果是百度经纬度,默认值gcj02
+        option.setScanSpan(5000); // 设置发起定位请求的间隔时间为5000ms
+        option.setIsNeedAddress(true); // 返回的定位结果包含地址信息
+        option.setNeedDeviceDirect(true); // 返回的定位结果包含手机机头的方向
+        locationClient.setLocOption(option);
+
+    }
+
+    public BDLocationListener myListener = new BDLocationListener() {
+        @Override
+        public void onReceiveLocation(BDLocation location) {
+            if (location == null)
+                return;
+            meLat = location.getLatitude();
+            meLon = location.getLongitude();
+
+        }
+    };
+
 
     /**
      * 启动百度地图导航模式
@@ -206,18 +288,14 @@ public class CustomerManageActivity extends BaseActivity implements View.OnClick
 
     @Override
     public void initEvent() {
-
         mTextView_SortByDistance.setOnClickListener(this);
         mTextView_SortByName.setOnClickListener(this);
         mTextView_SortByTime.setOnClickListener(this);
         mTextView_SortByVisitor.setOnClickListener(this);
-
         mLinearLayout_Back.setOnClickListener(this);
         mLinearLayout_Sort.setOnClickListener(this);
         mLinearLayout_Search.setOnClickListener(this);
-
         mImageView_AddClient.setOnClickListener(this);
-        mListView_Client.setOnItemClickListener(this);
         mView_Shadow.setOnLongClickListener(this);
 
     }
@@ -334,4 +412,39 @@ public class CustomerManageActivity extends BaseActivity implements View.OnClick
         return false;
     }
 
+    /**
+     * 请求服务器获取数据
+     */
+    public void getInfo() {
+        try {
+            SharedPreferences sp = SpUtil.getSp();
+            String distr_id = sp.getString(SpUtil.DISTR_ID, "");
+            String id = sp.getString(SpUtil.ID, "");
+            JSONObject object = new JSONObject();
+            object.put("employeeId", id);
+            object.put("distributorId", distr_id);
+            JsonObjectRequest jsonRequest1 = new JsonObjectRequest(
+                    Request.Method.POST, SpUtil.BASE_URL + "/tArchCustomer/AppCustomerList", object,
+                    new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            if (response != null) {
+                                jsonObject = response;
+                                Message message = new Message();
+                                message.what = 0;
+                                handler.sendMessageDelayed(message, 1000);
+                            }
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Log.e("error", "错误信息：" + error.toString());
+                }
+            });
+            MyApplication.queues.add(jsonRequest1);
+        } catch (Exception e) {
+            Log.e("error", "联网失败");
+            e.printStackTrace();
+        }
+    }
 }

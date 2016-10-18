@@ -7,10 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.youxiao.R;
+import com.youxiao.model.CustomerManagerBean;
 
-/** 基本信息Fragment
+/**
+ * 基本信息Fragment
+ *
  * @author StomHong
  * @since 2016-3-25
  */
@@ -18,27 +22,26 @@ public class BasicInfoFragment extends Fragment {
 
     private static final String TAG = BasicInfoFragment.class.getSimpleName();
 
-    private TextView mTextView_DisplayArea;
-    private TextView mTextView_OperatingArea;
-    private TextView mTextView_AccountWay;
-    private TextView mTextView_CustomerAddress;
-    private TextView mTextView_CustomerCard;
-    private TextView mTextView_DisplayWay;
-    private TextView mTextView_PriceType;
-    private TextView mTextView_Contact;
-    private TextView mTextView_MobilePhoneA;
-    private TextView mTextView_MobilePhoneB;
-    private TextView mTextView_DistributeRoute;
-    private TextView mTextView_CustomerName;
-    private TextView mTextView_CustomerType;
-    private TextView mTextView_CustomerArea;
-    private TextView mTextView_CustomerTelephone;
-
+    private TextView getcustomerNumber;//客户卡号
+    private TextView getCustomerName;//客户名称
+    private TextView getCustomerContact;//联系人
+    private TextView getCustomerPhone;//客户电话
+    private TextView getCustomerMobieA;//电话A
+    private TextView getCustomerMobieB;//电话B
+    private TextView getCustomerAddress;//客户地址
+    private TextView getCustomerType;//客户类型
+    private TextView getCustomerRoute;//分配路线
+    private TextView getCustomerArea;//客户区域
+    private TextView getCustomerPriceType;//价格类型
+    private TextView getCustomerDisplayWay;//陈列方式
+    private TextView getCustomerBalanceWay;//结算方式
+    private TextView getCustomerDispalyArea;//陈列面积
+    private TextView getCustomerBusinessArea;//营业面积
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tab_for_client_details1,container,false);
+        View view = inflater.inflate(R.layout.tab_for_client_details1, container, false);
         initView(view);
         initData();
         initEvent();
@@ -47,54 +50,60 @@ public class BasicInfoFragment extends Fragment {
 
     private void initEvent() {
 
-
     }
 
     private void initData() {
+        String custId = getArguments().getString("custId");//客户卡号
+        String custName = getArguments().getString("custName");//客户名称
+        String contact = getArguments().getString("contact");//联系人
+        String telNo = getArguments().getString("telNo");//客户电话
+        String mobilea = getArguments().getString("mobilea");//移动电话A
+        String mobileb = getArguments().getString("mobileb");//移动电话B
+        String Addresss = getArguments().getString("Addresss");//客户地址
+        String customerTypeName = getArguments().getString("customerTypeName");//客户类型
+        String line = getArguments().getString("line");//分配线路
+        String customerArea = getArguments().getString("customerArea");//客户区域
+        String Pricetype = getArguments().getString("Pricetype");//价格类型
+        String displayName = getArguments().getString("displayName");//陈列方式
+        String balance = getArguments().getString("balance");//结算方式
+        String displayArea = getArguments().getString("displayArea");//陈列面积
+        String businessArea = getArguments().getString("businessArea");//营业面积
 
-
-////        STR_T_ARCH_CUSTOMER  selectedCustomer = (STR_T_ARCH_CUSTOMER)getActivity().getIntent().getSerializableExtra("selectedCustomer");
-//        if (selectedCustomer != null) {
-////            mTextView_AccountWay.setText(selectedCustomer.getCHECKOUT_STATUS());
-////            mTextView_OperatingArea.setText(selectedCustomer.getOPERATING_AREA());
-////            mTextView_DistributeRoute.setText(GLOBAL.LINE_NAME);
-////            mTextView_MobilePhoneB.setText(selectedCustomer.getMOBILE2());
-////            mTextView_MobilePhoneA.setText(selectedCustomer.getMOBILE1());
-////            mTextView_CustomerAddress.setText(selectedCustomer.getCUST_ADDR());
-////            mTextView_CustomerCard.setText(selectedCustomer.getCUST_NO());
-////            mTextView_Contact.setText(selectedCustomer.getCONTACT());
-////            mTextView_DisplayArea.setText(selectedCustomer.getDISPLAY_AREA());
-////            mTextView_DisplayWay.setText(selectedCustomer.getDISPLAY_NAME());
-////            mTextView_PriceType.setText(selectedCustomer.getPRICE_TYPE());
-////            mTextView_CustomerName.setText(selectedCustomer.getCUST_NAME());
-////            mTextView_CustomerArea.setText(selectedCustomer.getCUST_GROUP());
-////            mTextView_CustomerTelephone.setText(selectedCustomer.getTEL_NO());
-////            mTextView_CustomerType.setText(selectedCustomer.getCUST_TYPE());
-//
-//
-//        }else {
-//            Toast.makeText(getActivity(),"所获取的客户档案实例为空，请检查！",Toast.LENGTH_SHORT).show();
-//        }
+        getcustomerNumber.setText(custId);
+        getCustomerName.setText(custName);
+        getCustomerContact.setText(contact);
+        getCustomerPhone.setText(telNo);
+        getCustomerMobieA.setText(mobilea);
+        getCustomerMobieB.setText(mobileb);
+        getCustomerAddress.setText(Addresss);
+        getCustomerType.setText(customerTypeName);
+        getCustomerRoute.setText(line);
+        getCustomerArea.setText(customerArea);
+        getCustomerPriceType.setText(Pricetype);
+        getCustomerDisplayWay.setText(displayName);
+        getCustomerBalanceWay.setText(balance);
+        getCustomerDispalyArea.setText(displayArea);
+        getCustomerBusinessArea.setText(businessArea);
 
     }
 
     private void initView(View view) {
+        getcustomerNumber = (TextView) view.findViewById(R.id.customerCardNumber);
+        getCustomerName = (TextView) view.findViewById(R.id.customerName);
+        getCustomerContact = (TextView) view.findViewById(R.id.customerContact);
+        getCustomerPhone = (TextView) view.findViewById(R.id.customerPhone);
+        getCustomerMobieA = (TextView) view.findViewById(R.id.customerMobiePhoneA);
+        getCustomerMobieB = (TextView) view.findViewById(R.id.customerMobiePhoneB);
+        getCustomerAddress = (TextView) view.findViewById(R.id.customerAddress);
+        getCustomerType = (TextView) view.findViewById(R.id.customerType);
+        getCustomerRoute = (TextView) view.findViewById(R.id.customerDistributionRoute);
+        getCustomerArea = (TextView) view.findViewById(R.id.customerArea);
+        getCustomerPriceType = (TextView) view.findViewById(R.id.customerPriceType);
+        getCustomerDisplayWay = (TextView) view.findViewById(R.id.customerWays);
+        getCustomerBalanceWay = (TextView) view.findViewById(R.id.customerBalanceWay);
+        getCustomerDispalyArea = (TextView) view.findViewById(R.id.customerDisplayArea);
+        getCustomerBusinessArea = (TextView) view.findViewById(R.id.customerBusinessArea);
 
-//        mTextView_OperatingArea = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_operating_area);
-//        mTextView_AccountWay = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_account_way);
-//        mTextView_CustomerAddress = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_customer_address);
-//        mTextView_CustomerCard = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_customer_card);
-//        mTextView_DisplayWay = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_display_way);
-//        mTextView_DisplayArea = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_display_area);
-//        mTextView_PriceType = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_price_type);
-//        mTextView_Contact = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_contact);
-//        mTextView_MobilePhoneA = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_mobile_phone_a);
-//        mTextView_MobilePhoneB = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_mobile_phone_b);
-//        mTextView_DistributeRoute = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_distribute_route);
-//        mTextView_CustomerName = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_customer_name);
-//        mTextView_CustomerType = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_customer_type);
-//        mTextView_CustomerArea = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_customer_area);
-//        mTextView_CustomerTelephone = (TextView) view.findViewById(R.id.id_tv_client_details_basic_info_customer_telephone);
 
     }
 

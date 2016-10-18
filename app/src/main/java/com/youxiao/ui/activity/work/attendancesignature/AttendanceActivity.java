@@ -49,6 +49,7 @@ public class AttendanceActivity extends BaseActivity implements View.OnClickList
     private TextView mTextView_LocationName;
     private MyLocationData mLocData;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -211,7 +212,7 @@ public class AttendanceActivity extends BaseActivity implements View.OnClickList
      */
     private Bitmap getBitmap() {
         //加载需要操作的图片，这里是一张图片
-        Bitmap bitmapOrg = BitmapFactory.decodeResource(getResources(), R.drawable.zuobiao);
+        Bitmap bitmapOrg = BitmapFactory.decodeResource(getResources(), R.drawable.zuobiao2);
         //获取这个图片的宽和高
         int width = bitmapOrg.getWidth();
         int height = bitmapOrg.getHeight();

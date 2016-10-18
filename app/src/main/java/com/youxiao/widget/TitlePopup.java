@@ -1,6 +1,7 @@
 package com.youxiao.widget;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.view.Gravity;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -15,6 +17,9 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.youxiao.R;
+import com.youxiao.ui.activity.sales.commodityselector.CommoditySearchActivity;
+import com.youxiao.ui.activity.sales.salesmodule.SearchActivity;
+import com.youxiao.ui.activity.sales.scancode.MipcaActivityCapture;
 
 import java.util.ArrayList;
 
@@ -89,22 +94,24 @@ public class TitlePopup extends PopupWindow {
 	private void initUI(){
 		mListView = (ListView) getContentView().findViewById(R.id.title_list);
 
-//		mListView.setOnItemClickListener(new OnItemClickListener() {
-//			@Override
-//			public void onItemClick(AdapterView<?> arg0, View arg1, int index,long arg3) {
-//				//点击子类项后，弹窗消失
-//				dismiss();
-//
-//				if(mItemOnClickListener != null)
-//					mItemOnClickListener.onItemClick(mActionItems.get(index), index);
-//				deposit_switch (index){
-//					case 0://扫一扫
-//						Intent intent = new Intent(mContext, MipcaActivityCapture.class);
-//						mContext.startActivity(intent);
-//						break;
-//					case 1://商品搜索
-//						mContext.startActivity(new Intent(mContext, CommoditySearchActivity.class));
-//						break;
+		mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int index, long arg3) {
+				//点击子类项后，弹窗消失
+				dismiss();
+
+				if(mItemOnClickListener != null)
+					mItemOnClickListener.onItemClick(mActionItems.get(index), index);
+				switch (index){
+					case 0://扫一扫
+						Intent intent = new Intent(mContext, MipcaActivityCapture.class);
+						mContext.startActivity(intent);
+						break;
+					case 1://商品搜索
+						Intent intent2 = new Intent(mContext, SearchActivity.class);
+						intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+						mContext.startActivity(intent2);
+						break;
 //					case 2://销售模块
 //						mContext.startActivity(new Intent(mContext, SalesTemplateActivity.class));
 //						break;
@@ -124,9 +131,9 @@ public class TitlePopup extends PopupWindow {
 //							Toast.makeText(mContext,"请先进店再销售！",Toast.LENGTH_SHORT).show();
 //						}
 //						break;
-//				}
-//			}
-//		});
+				}
+			}
+		});
 	}
 
 	/**

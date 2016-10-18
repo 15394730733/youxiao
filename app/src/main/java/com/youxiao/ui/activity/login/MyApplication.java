@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.baidu.mapapi.SDKInitializer;
 
 /**
  * Created by Administrator on 2016/9/9.
@@ -15,6 +16,7 @@ public class MyApplication extends Application {
 
     @Override
     public void onCreate() {
+        SDKInitializer.initialize(this.getApplicationContext());
         super.onCreate();
         context=getApplicationContext();
 

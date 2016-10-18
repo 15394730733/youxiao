@@ -28,6 +28,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerCardNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -62,6 +63,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -96,6 +98,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerContact"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -130,6 +133,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -164,6 +168,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerMobiePhoneA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -198,6 +203,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerMobiePhoneB"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -235,6 +241,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
@@ -265,6 +272,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -299,6 +307,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerDistributionRoute"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -333,6 +342,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerArea"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -367,6 +377,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerPriceType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -409,7 +420,8 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:text="端架"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:id="@+id/customerWays" />
 
             </RelativeLayout>
 
@@ -435,6 +447,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerBalanceWay"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -467,6 +480,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerDisplayArea"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -502,6 +516,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/customerBusinessArea"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
